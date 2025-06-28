@@ -33,5 +33,4 @@
 .flink-item {
   flex: 0 0 auto; /* 不自动拉伸，保持内容宽度 */
   min-width: 120px; /* 友链项最小宽度，可调整 */
-  text-align: center; /* 文字居中，可选 */
 }
