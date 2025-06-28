@@ -3,5 +3,30 @@
   
   
   
+  <entry>
+    <title>Hello World!</title>
+    <link href="/2025/06/28/hello-world/"/>
+    <url>/2025/06/28/hello-world/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Updated-2025-06-28"><a href="#Updated-2025-06-28" class="headerlink" title="Updated. 2025.06.28"></a>Updated. 2025.06.28</h1><p>​这是创建博客时系统自动生成的第一篇文章，应该会长期保留吧。文章本来是用来介绍 Hexo 的入门技巧的，现在改来记一些其他的东西了，不过要记什么还没有想好，目前单纯留作纪念。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>杂记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
