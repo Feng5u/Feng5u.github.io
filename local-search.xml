@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>[CF ER180]index</title>
+    <link href="/2025/06/29/CF-ER180-index/"/>
+    <url>/2025/06/29/CF-ER180-index/</url>
+    
+    <content type="html"><![CDATA[<h1 id="赛时过题情况"><a href="#赛时过题情况" class="headerlink" title="赛时过题情况"></a>赛时过题情况</h1><p><strong>日期</strong>：$2025.06.23$</p><p>本来是要参加的，作为期末周终于结束之后的第一次练手，但是白天的时候刚刚重装了电脑系统，导致虽然软件都下好了，但是环境一点没配，比赛开始了才发现这个问题导致把 A 题的代码写完发现跑不了，花了半个小时配好了环境于是不想打了，所以赛时过题数为 $0$。</p><h1 id="赛后补题情况"><a href="#赛后补题情况" class="headerlink" title="赛后补题情况"></a>赛后补题情况</h1><p><strong>日期</strong>：$2025.06.25$</p><p>自己做出了 A 和 B 两道题，C 题虽然想到了正确解法但是算错了时间复杂度，以为会超时，苦苦想了半天没有结果，然后发现题解还没有出，就先鸽着了。</p><p><strong>日期</strong>：$2025.06.27$</p><p>今天题解出了，发现 C 题就是我的解法，于是过了。D 题想出了绝大部分（基本可以说是做出来了），但是掉进了自己的思维陷阱里面，差了一点点，可恶。这一天只做了两道题，然后就去搭建个人博客了，虽然也没有成功，简而言之就是摸鱼了。</p><p><strong>日期</strong>：$2025.06.28$</p><p>白天搭了一天的博客以及观赏了雨景以及逗了猫，所以只补了一道题 E。自己想出了符合条件的染色方案，但是如何通过染色方案反解树的节点数没想出来。</p><p>附一张摸鱼时候拍的猫猫图片：</p><p><img src="C:\Users\16244\Pictures\c6b0be9c8b804e7c789d54f81cb5ae14.jpg" alt="年轻的猫猫渴望建立功勋"></p><p><strong>日期</strong>：$2025.06.29$</p><p>今天终于把所有题补完了。难道大家都能想到 F 题是最短路吗？完全看不出来，还是太菜了。以及今天写完了所有的题解和总结。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[CF ER180] F. Variables and Operations</title>
     <link href="/2025/06/29/CF-ER180-F-Variables-and-Operations/"/>
     <url>/2025/06/29/CF-ER180-F-Variables-and-Operations/</url>
