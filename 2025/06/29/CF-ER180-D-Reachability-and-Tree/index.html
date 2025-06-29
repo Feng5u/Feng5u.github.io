@@ -19,14 +19,18 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="Statement给定一棵树，树上的边都是无向边。现在要为每一条边选择一个方向，定义有序点对 $(u,v)$ 是好的当且仅当存在一条从 $u$ 到 $v$ 的道路。对于每一棵含有 $n$ 个节点的树，给出一种建树方法，使得书上恰好有 $n$ 个有序点对是好的。 $2 \leq n \leq 2 \times 10^5$ Tutorial为每一条边选择一个方向后，任意相邻点都会产生一个好的有序点对，">
+<meta property="og:type" content="article">
 <meta property="og:title" content="[CF ER180] D. Reachability and Tree">
 <meta property="og:url" content="https://feng5u.github.io/2025/06/29/CF-ER180-D-Reachability-and-Tree/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
+<meta property="og:description" content="Statement给定一棵树，树上的边都是无向边。现在要为每一条边选择一个方向，定义有序点对 $(u,v)$ 是好的当且仅当存在一条从 $u$ 到 $v$ 的道路。对于每一棵含有 $n$ 个节点的树，给出一种建树方法，使得书上恰好有 $n$ 个有序点对是好的。 $2 \leq n \leq 2 \times 10^5$ Tutorial为每一条边选择一个方向后，任意相邻点都会产生一个好的有序点对，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-29T05:51:37.000Z">
-<meta property="article:modified_time" content="2025-06-29T05:51:37.691Z">
+<meta property="article:modified_time" content="2025-06-29T08:07:50.169Z">
 <meta property="article:author" content="Feng5u">
+<meta property="article:tag" content="Constructive Algorithms">
+<meta property="article:tag" content="Tree">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -208,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          493 字
         
       </span>
     
@@ -219,7 +223,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -261,7 +265,14 @@
             
               <div class="markdown-body">
                 
-                
+                <h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>给定一棵树，树上的边都是无向边。现在要为每一条边选择一个方向，定义有序点对 $(u,v)$ 是好的当且仅当存在一条从 $u$ 到 $v$ 的道路。对于每一棵含有 $n$ 个节点的树，给出一种建树方法，使得书上恰好有 $n$ 个有序点对是好的。</p>
+<p>$2 \leq n \leq 2 \times 10^5$</p>
+<h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>为每一条边选择一个方向后，任意相邻点都会产生一个好的有序点对，此时至少有 $n-1$ 个好的点对，且当且仅当任意节点都只有入度或只有出度时，恰好有 $n-1$ 个好的点对。称一个节点只有入度或只有出度为一种状态，则上述条件等价为任意两个相邻节点的状态相反。</p>
+<p>下面，从 $n-1$ 个好的点对出发，考虑如何构造 $n$ 个好的点对。毫无疑问，我们需要翻转某些边的方向。假设只翻转一条由 $v$ 指向 $u$ 的边，使得其由 $u$ 指向 $v$。下面固定住 $u$ 其他边不动，考虑 $v$。现在，所有原本指向 $u$ 的节点都有一条路径通向 $v$，增加了 $s_u - 1$ 个好的点对，其中 $s_u$ 指的是 $u$ 的入度。为了不再产生更多点对，将 $v$ 的状态反转，并在固定 $u$ 不动与维持前文性质的前提下，重新构建整棵树。于是，这棵树目前有 $n-1 + s_u - 1$ 个好的点对。于是可以得到，$s_u &#x3D; 2$。</p>
+<p>上面是 $u$ 仅有入度的情况，仅有出度时显然情况相同。或者说，在还没有开始构建有向树时，$u$ 可以是任意一个度为 $2$ 的节点。如果没有这样的节点，则无法构建一棵符合条件的树。</p>
+<p>于是，遍历所有节点，找到一个 $u$ 之后，构造即可。</p>
+<p>时间复杂度：$O(n)$</p>
+
                 
               </div>
             
@@ -269,6 +280,50 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/" class="category-chain-item">比赛题解</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Educational-Round-180/" class="category-chain-item">Educational Round 180</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Constructive-Algorithms/" class="print-no-link">#Constructive Algorithms</a>
+      
+        <a href="/tags/Tree/" class="print-no-link">#Tree</a>
+      
+    </div>
   
 </div>
 

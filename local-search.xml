@@ -8,9 +8,25 @@
     <link href="/2025/06/29/CF-ER180-F-Variables-and-Operations/"/>
     <url>/2025/06/29/CF-ER180-F-Variables-and-Operations/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>假设有一个数列 ${a_n}$ 和 $m$ 个操作，每个操作给定三个数字 $x_i,y_i,z_i$，令 $a_{x_i} &#x3D; \min{a_{x_i}, a_{y_i} + z_i}$。</p><p>每个操作执行一次，但可以随意调换次序。</p><p>下面定义一个数列的 $i-\text{unstable}$：当且仅当在不同的次序下，数列中第 $i$ 个元素的值会发生改变，那么这个数列就是 $i-\text{unstable}$ 的。</p><p>下面，给定一个数字 $n$ 和 $m$ 个操作以及 $q$ 次询问，每次询问给定一个数列 ${a_n}$，和一个操作数 $k$，表示可以进行至多 $k$ 次选择一个元素减一的操作。然后进行如下回答：对于每一个 $i$，是否有可能使得 ${a_n}$ 变为 $i-\text{unstable}$ 数列，可能则输出 $1$，否则输出 $0$。最后输出一个 $01$ 序列。</p><p>$2 \leq n \leq 500, 1 \leq m \leq 4 \times 10^5, 0 \leq z_i \leq 10^5$</p><p>$1 \leq q \leq 1000, 0 \leq k \leq 10^9, 0 \leq a_i \leq 10^9$</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>首先考虑题中给定的操作 $a_{x_i} &#x3D; \min{a_{x_i}, a_{y_i} + z_i}$，这与最短路中的松弛操作非常类似，所以题目就变为。对于一个超级源点，初始时已知每个点到该源点的距离为 $a_i$，现在进行一系列松弛操作，问第 $i$ 个点的最短路是否会因为操作的次序而不同。</p><p>考虑最短路求解的正确性与松弛次序有关的条件。如果一条最短路只有 $0$ 或 $1$ 条边，且题目给出的操作保证一定松弛了这条边，那么该最短路就与次序无关。否则，如果一条最短路有至少两条边，记该点为 $u$，它的上一个点为 $v$，那么只要调整次序，先松弛所有 $v$ 到 $u$ 的边，再松弛其他的边，就可以导致最短路求解出错。</p><p>接下来考虑如何让求解出错。可以出错的前提条件是最短路至少有两条边，那么定义 $d_{ij}$ 为从 $i$ 到 $j$ 的最短路，$e_{ij}$ 为从 $i$ 到 $j$ 的只有 $0$ 或 $1$ 条边的最短路。所以出错的前提条件就化为：对于节点 $u$，存在一个 $v$ 使得 $d_{vu} &lt; e_{vu}$。而为了让求解出错，需要让这个点 $v$ 可以影响到最后的结果。形式化地说，令最短路为 $\text{short-_path}$，只有 $0$ 或 $1$ 条边的最短路为 $\text{short_edge}$，于是有<br>$$<br>\text{short_path}<em>i &#x3D; \min</em>{1 \leq j \leq n} d_{ji} + a_j\<br>\text{short_edge}<em>i &#x3D; \min</em>{1 \leq j \leq n} e_{ji} + a_j\<br>$$<br>所以，必须让 $\text{short_path$<em>i$ &lt; short_edge$<em>i$}$，而能做到这一点的 $j$，就在之前满足 $d</em>{ji} &lt; e</em>{ji}$ 的 $j$ 中，对于每一个满足条件的 $j$，我们都可以对 $a_j$ 进行减一操作，最少需要执行 $d_{ji} + a_j - \text{short_edge}_i + 1$ 次，在这些次数中取最小值，即是对于元素 $a_i$，为了使数列变成 $i-\text{unstable}$ 最少需要执行的次数。如果该次数小于等于给定的最多操作次数上限，则输出 $1$。</p><p>时间复杂度：$O(n^3 + m)$</p>]]></content>
     
     
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Shortest Path</tag>
+      
+    </tags>
     
   </entry>
   
@@ -21,9 +37,27 @@
     <link href="/2025/06/29/CF-ER180-E-Tree-Colorings/"/>
     <url>/2025/06/29/CF-ER180-E-Tree-Colorings/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>给定一棵有根树，每个节点都可以被涂成蓝、绿、黄三种颜色中的一种，其中，根节点一定是绿色。现在对整棵树进行染色，要求满足以下两个要求：</p><ol><li>考虑所有的蓝色和绿色节点，任意两个节点之间的路径上不可以有黄色；</li><li>考虑所有的黄色和绿色节点，任意两个节点之间的路径上不可以有蓝色。</li></ol><p>现在，为了有恰好 $m$ 种合法的染色方案，问至少需要多少个节点。如果不可能，输出 $-1$。</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>首先考虑，一棵合法的树可能长什么样子。已知根节点一定是绿色，考虑他的子节点。如果子节点是蓝色和黄色，那么以该子节点为根的子树中的所有节点一定与该节点颜色相同。如果子节点是绿色，那么以该子节点为根的子树是原树的一个相似的子问题。记以 $u$ 为根的树（此时 $u$ 为绿色）一共有 $cnt_u$ 种合法的染色方案，那么，<br>$$<br>cnt_u &#x3D; \prod_v (cnt_v + 2), (\text{if $v$ is a child node of $u$})<br>$$<br>于是我们得到了，给定一棵树，如何得到其所有的合法方案。</p><p>下面，考虑如何将这个思路反过来。既然染色方案涉及递归，那么反过来的时候也可以采用递推的方法，也就是 $\text{DP}$。</p><p>考虑 $dp_m$ 表示当合法的染色方案数为 $m$ 种时，最少的节点个数，那么根据 $cnt$ 的递推式，就有<br>$$<br>dp_m &#x3D; \min{dp_m, dp_{\frac mx} + dp_{x-2}}<br>$$<br> 其中，$x$ 必须是 $m$ 的因子。同时，$dp_1 &#x3D; 1$。</p><p>于是，对于每一个 $m$，遍历其所有的因子，这个过程只需要遍历 $\sqrt m$ 次即可。</p><p>时间复杂度：$O(m\sqrt m)$</p>]]></content>
     
     
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tree</tag>
+      
+      <tag>DP</tag>
+      
+    </tags>
     
   </entry>
   
@@ -34,9 +68,27 @@
     <link href="/2025/06/29/CF-ER180-D-Reachability-and-Tree/"/>
     <url>/2025/06/29/CF-ER180-D-Reachability-and-Tree/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>给定一棵树，树上的边都是无向边。现在要为每一条边选择一个方向，定义有序点对 $(u,v)$ 是好的当且仅当存在一条从 $u$ 到 $v$ 的道路。对于每一棵含有 $n$ 个节点的树，给出一种建树方法，使得书上恰好有 $n$ 个有序点对是好的。</p><p>$2 \leq n \leq 2 \times 10^5$</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>为每一条边选择一个方向后，任意相邻点都会产生一个好的有序点对，此时至少有 $n-1$ 个好的点对，且当且仅当任意节点都只有入度或只有出度时，恰好有 $n-1$ 个好的点对。称一个节点只有入度或只有出度为一种状态，则上述条件等价为任意两个相邻节点的状态相反。</p><p>下面，从 $n-1$ 个好的点对出发，考虑如何构造 $n$ 个好的点对。毫无疑问，我们需要翻转某些边的方向。假设只翻转一条由 $v$ 指向 $u$ 的边，使得其由 $u$ 指向 $v$。下面固定住 $u$ 其他边不动，考虑 $v$。现在，所有原本指向 $u$ 的节点都有一条路径通向 $v$，增加了 $s_u - 1$ 个好的点对，其中 $s_u$ 指的是 $u$ 的入度。为了不再产生更多点对，将 $v$ 的状态反转，并在固定 $u$ 不动与维持前文性质的前提下，重新构建整棵树。于是，这棵树目前有 $n-1 + s_u - 1$ 个好的点对。于是可以得到，$s_u &#x3D; 2$。</p><p>上面是 $u$ 仅有入度的情况，仅有出度时显然情况相同。或者说，在还没有开始构建有向树时，$u$ 可以是任意一个度为 $2$ 的节点。如果没有这样的节点，则无法构建一棵符合条件的树。</p><p>于是，遍历所有节点，找到一个 $u$ 之后，构造即可。</p><p>时间复杂度：$O(n)$</p>]]></content>
     
     
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Constructive Algorithms</tag>
+      
+      <tag>Tree</tag>
+      
+    </tags>
     
   </entry>
   
@@ -47,9 +99,25 @@
     <link href="/2025/06/29/CF-ER180-C-Coloring-Game/"/>
     <url>/2025/06/29/CF-ER180-C-Coloring-Game/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>给定一个数列 ${a_n}$，满足是一个单调递增数列，$\text{Alice}$ 先从中选择三个数字涂上红色，$\text{Bob}$ 再从中选择一个数字涂上蓝色（如果已经涂成红色则覆盖），如果红色的数字之和严格大于蓝色的数字，则 $\text{Alice}$ 获胜。询问 $\text{Alice}$ 有多少种选法，不管 $\text{Bob}$ 选什么都可以获胜。</p><p>$3 \leq n \leq 5000, 1 \leq a_1 \leq a_2 \leq \cdots \leq a_n \leq 10^5$</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>假设 $\text{Alice}$ 选择了三个数字 $a1, a2, a3$，满足 $a1 \geq a2 \geq a3$。考虑 $\text{Bob}$ 会如何选择。</p><p>如果 $a1 \geq a2 + a3$，则 $\text{Bob}$ 一定选择 $a1$；否则，只能选择数列中最大的数字，记为 $a0$。</p><p>于是问题转化为，有多少种方法，使得 $a1 + a2 + a3 &gt; a0$ 且 $a2 + a3 &gt; a1$。即需要满足：<br>$$<br>a2 + a3 &gt; \max{a1, a0 - a1}<br>$$<br>由于当 $a1$ 固定之后，$\max{a1,a0-a1}$ 就固定了，因此可以考虑首先固定 $a1,a2$，那么 $a3$ 就可以通过二分法得到。</p><p>时间复杂度：$O(n^2\log n)$</p>]]></content>
     
     
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>binary search</tag>
+      
+    </tags>
     
   </entry>
   
