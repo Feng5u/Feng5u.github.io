@@ -4,6 +4,100 @@
   
   
   <entry>
+    <title>[CF ER180] F. Variables and Operations</title>
+    <link href="/2025/06/29/CF-ER180-F-Variables-and-Operations/"/>
+    <url>/2025/06/29/CF-ER180-F-Variables-and-Operations/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[CF ER180] E. Tree Colorings</title>
+    <link href="/2025/06/29/CF-ER180-E-Tree-Colorings/"/>
+    <url>/2025/06/29/CF-ER180-E-Tree-Colorings/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[CF ER180] D. Reachability and Tree</title>
+    <link href="/2025/06/29/CF-ER180-D-Reachability-and-Tree/"/>
+    <url>/2025/06/29/CF-ER180-D-Reachability-and-Tree/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[CF ER180] C. Coloring Game</title>
+    <link href="/2025/06/29/CF-ER180-C-Coloring-Game/"/>
+    <url>/2025/06/29/CF-ER180-C-Coloring-Game/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[CF ER180] B. Shrinking Array</title>
+    <link href="/2025/06/29/CF-ER180-B-Shrinking-Array/"/>
+    <url>/2025/06/29/CF-ER180-B-Shrinking-Array/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[CF ER180] A. Race</title>
+    <link href="/2025/06/29/CF-ER180-A-Race/"/>
+    <url>/2025/06/29/CF-ER180-A-Race/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Statements"><a href="#Statements" class="headerlink" title="Statements"></a>Statements</h1><p>给定三个数字 $a, x, y$，问是否存在一个数字 $b$，满足 $|b-x|&lt;|a-x|$ 且 $|b-y| &lt; |a-y|$。</p><p>$1 \leq a, x, y \leq 100$</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>采用几何的观点直观理解一下，就是在数轴上，$b$ 在 $a$ 和 $x,y$ 的中间。很显然，只有当 $a &gt; \max{x,y}$ 和 $a &lt; \min{x,y}$ 时成立。</p><p>时间复杂度：$O(1)$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>implement</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World!</title>
     <link href="/2025/06/28/hello-world/"/>
     <url>/2025/06/28/hello-world/</url>
