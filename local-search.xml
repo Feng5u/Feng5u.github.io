@@ -60,8 +60,18 @@
     <link href="/2025/06/29/CF-ER180-B-Shrinking-Array/"/>
     <url>/2025/06/29/CF-ER180-B-Shrinking-Array/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h1><p>给定一个数组 ${a_n}$，对其进行如下操作：</p><ol><li>选择两个元素 $a_i$ 和 $a_{i+1}$；</li><li>选择一个数字 $x$，满足 $ \min{a_i,a_{i+1}} \leq x \leq \max{a_i, a_{i+1} }$，替换 $a_i$ 和 $a_{i+1}$。</li></ol><p>问至少需要多少次操作，才能使得数组中存在一个位置 $i$，满足 $|b_i - b_{i+1}| \leq 1$。</p><p>$2 \leq n \leq 1000, 1 \leq a_i \leq 10^6$</p><h1 id="Tutorial"><a href="#Tutorial" class="headerlink" title="Tutorial"></a>Tutorial</h1><p>暂时跳出这个操作的描述的约束，观察这个操作的本质。实际上，这个操作可以被认为是首先选择了若干元素，这些元素在原数列中形成若干个连续子序列，然后从每一个连续子序列中找到最大值和最小值作为替换数字取值的上下界，然后替换掉这些子序列。</p><p>所以，可以首先有一个结论：被选择的数字一定构成原数列的一个连续子序列。</p><p>于是，就变成了对于每一个元素 $a_i$，分别向右和向左找到最短的连续子序列，使得 $a_i$ 即是满足条件的值。</p><p>时间复杂度：$O(n^2)$</p>]]></content>
     
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>Codeforces</category>
+      
+      <category>Educational Round 180</category>
+      
+    </categories>
     
     
   </entry>
