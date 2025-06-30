@@ -19,21 +19,23 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Statements 给定三个数字 a,x,ya, x, ya,x,y，问是否存在一个数字 bbb，满足 ∣b−x∣&lt;∣a−x∣|b-x|&lt;|a-x|∣b−x∣&lt;∣a−x∣ 且 ∣b−y∣&lt;∣a−y∣|b-y| &lt; |a-y|∣b−y∣&lt;∣a−y∣。 1≤a,x,y≤1001 \leq a, x, y \leq 1001≤a,x,y≤100 Tutorial 采">
+    <meta name="description" content="Statement 给定一个有 NNN 个节点，MMM 条无向边的简单无向图 GGG（没有重边和自环），现在可以进行多次操作，每次操作可以删除一条边或添加一条边，最终使得每一个节点的度都是 222。问最少操作次数。 3≤N≤8,0≤M≤N(N−1)23 \leq N \leq 8, 0 \leq M \leq \dfrac{N(N-1)}{2}3≤N≤8,0≤M≤2N(N−1)​ Tutorial">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[CF ER180] A. Race">
-<meta property="og:url" content="https://feng5u.github.io/2025/06/29/CF-ER180-A-Race/index.html">
+<meta property="og:title" content="[AT ABC412] D - Make 2-Regular Graph">
+<meta property="og:url" content="https://feng5u.github.io/2025/06/30/AT-ABC412-D-Make-2-Regular-Graph/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="Statements 给定三个数字 a,x,ya, x, ya,x,y，问是否存在一个数字 bbb，满足 ∣b−x∣&lt;∣a−x∣|b-x|&lt;|a-x|∣b−x∣&lt;∣a−x∣ 且 ∣b−y∣&lt;∣a−y∣|b-y| &lt; |a-y|∣b−y∣&lt;∣a−y∣。 1≤a,x,y≤1001 \leq a, x, y \leq 1001≤a,x,y≤100 Tutorial 采">
+<meta property="og:description" content="Statement 给定一个有 NNN 个节点，MMM 条无向边的简单无向图 GGG（没有重边和自环），现在可以进行多次操作，每次操作可以删除一条边或添加一条边，最终使得每一个节点的度都是 222。问最少操作次数。 3≤N≤8,0≤M≤N(N−1)23 \leq N \leq 8, 0 \leq M \leq \dfrac{N(N-1)}{2}3≤N≤8,0≤M≤2N(N−1)​ Tutorial">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-29T05:49:49.000Z">
-<meta property="article:modified_time" content="2025-06-30T03:49:36.973Z">
+<meta property="article:published_time" content="2025-06-30T03:36:51.000Z">
+<meta property="article:modified_time" content="2025-06-30T04:02:06.122Z">
 <meta property="article:author" content="Feng5u">
+<meta property="article:tag" content="Graph">
+<meta property="article:tag" content="Enumeration">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[CF ER180] A. Race - Feng5u&#39;s blog</title>
+  <title>[AT ABC412] D - Make 2-Regular Graph - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -189,7 +191,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[CF ER180] A. Race"></span>
+            <span id="subtitle" data-typed-text="[AT ABC412] D - Make 2-Regular Graph"></span>
           
         </div>
 
@@ -200,8 +202,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-29 13:49" pubdate>
-          2025年6月29日 下午
+        <time datetime="2025-06-30 11:36" pubdate>
+          2025年6月30日 中午
         </time>
       </span>
     
@@ -212,7 +214,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          148 字
+          318 字
         
       </span>
     
@@ -223,7 +225,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -260,17 +262,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[CF ER180] A. Race</h1>
+            <h1 id="seo-header">[AT ABC412] D - Make 2-Regular Graph</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>Statements</h1>
-<p>给定三个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">a, x, y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，问是否存在一个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>，满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>b</mi><mo>−</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mo>−</mo><mi>x</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|b-x|&lt;|a-x|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mord">∣</span></span></span></span> 且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>b</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|b-y| &lt; |a-y|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∣</span></span></span></span>。</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1 \leq a, x, y \leq 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span></p>
+                <h1>Statement</h1>
+<p>给定一个有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> 个节点，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 条无向边的简单无向图 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>（没有重边和自环），现在可以进行多次操作，每次操作可以删除一条边或添加一条边，最终使得每一个节点的度都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>。问最少操作次数。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mi>N</mi><mo>≤</mo><mn>8</mn><mo separator="true">,</mo><mn>0</mn><mo>≤</mo><mi>M</mi><mo>≤</mo><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">3 \leq N \leq 8, 0 \leq M \leq \dfrac{N(N-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.113em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <h1>Tutorial</h1>
-<p>采用几何的观点直观理解一下，就是在数轴上，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 的中间。很显然，只有当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">{</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a &gt; \max\{x,y\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mopen">{</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">}</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mi>min</mi><mo>⁡</mo><mo stretchy="false">{</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a &lt; \min\{x,y\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">{</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">}</span></span></span></span> 时成立。</p>
-<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p>通过模拟测试样例发现，每一个节点的度都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 意味着 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> 中的任意连通块都是环。由于没有重边和自环，一个环中至少要有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span> 个节点，所以在本题的条件下，最多只能形成两个环。下面分别考虑两种情况。</p>
+<p>只有一个环时，只需要考虑节点在环上的顺序，所以枚举所有的全排列然后依次连边，最后与给定的图比较就可以得到操作数，从中取最小值即可。</p>
+<p>有两个环时，需要先将所有节点分类。又或者说，对于每一种可能的只有一个环的情况，从中选择一处断开形成两个环，与上一种情况思路类似。</p>
+<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">!</mo><mo>×</mo><msup><mi>N</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N! \times N^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
 
                 
               </div>
@@ -294,12 +298,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Atcoder/" class="category-chain-item">Atcoder</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Educational-Round-180/" class="category-chain-item">Educational Round 180</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Atcoder/Atcoder-Beginner-Contest-412/" class="category-chain-item">Atcoder Beginner Contest 412</a>
   
   
 
@@ -315,6 +319,15 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Graph/" class="print-no-link">#Graph</a>
+      
+        <a href="/tags/Enumeration/" class="print-no-link">#Enumeration</a>
+      
+    </div>
+  
 </div>
 
 
@@ -323,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[CF ER180] A. Race</div>
-      <div>https://feng5u.github.io/2025/06/29/CF-ER180-A-Race/</div>
+      <div>[AT ABC412] D - Make 2-Regular Graph</div>
+      <div>https://feng5u.github.io/2025/06/30/AT-ABC412-D-Make-2-Regular-Graph/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月29日</div>
+          <div>2025年6月30日</div>
         </div>
       
       
@@ -368,18 +381,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/29/CF-ER180-B-Shrinking-Array/" title="[CF ER180] B. Shrinking Array">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[CF ER180] B. Shrinking Array</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/28/hello-world/" title="Hello World!">
-                        <span class="hidden-mobile">Hello World!</span>
+                      <a href="/2025/06/30/AT-ABC412-index/" title="[AT ABC412] index">
+                        <span class="hidden-mobile">[AT ABC412] index</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

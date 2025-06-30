@@ -19,21 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Statements 给定三个数字 a,x,ya, x, ya,x,y，问是否存在一个数字 bbb，满足 ∣b−x∣&lt;∣a−x∣|b-x|&lt;|a-x|∣b−x∣&lt;∣a−x∣ 且 ∣b−y∣&lt;∣a−y∣|b-y| &lt; |a-y|∣b−y∣&lt;∣a−y∣。 1≤a,x,y≤1001 \leq a, x, y \leq 1001≤a,x,y≤100 Tutorial 采">
+    <meta name="description" content="赛时过题情况 日期： 2025.6.282025.6.282025.6.28 晚上七点半才吃上饭，比赛是八点开始的，于是顺理成章再次鸽掉一场比赛。所以赛时过题数为 000。 赛后补题情况 日期：2025.6.292025.6.292025.6.29 白天把前一场 CF 的题补完了，博客也都更新完毕，晚上把这一场的 A 题、B 题、C 题写了，都很简单，不打算写题解了。开了 D 题发现不会，猜测是一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[CF ER180] A. Race">
-<meta property="og:url" content="https://feng5u.github.io/2025/06/29/CF-ER180-A-Race/index.html">
+<meta property="og:title" content="[AT ABC412] index">
+<meta property="og:url" content="https://feng5u.github.io/2025/06/30/AT-ABC412-index/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="Statements 给定三个数字 a,x,ya, x, ya,x,y，问是否存在一个数字 bbb，满足 ∣b−x∣&lt;∣a−x∣|b-x|&lt;|a-x|∣b−x∣&lt;∣a−x∣ 且 ∣b−y∣&lt;∣a−y∣|b-y| &lt; |a-y|∣b−y∣&lt;∣a−y∣。 1≤a,x,y≤1001 \leq a, x, y \leq 1001≤a,x,y≤100 Tutorial 采">
+<meta property="og:description" content="赛时过题情况 日期： 2025.6.282025.6.282025.6.28 晚上七点半才吃上饭，比赛是八点开始的，于是顺理成章再次鸽掉一场比赛。所以赛时过题数为 000。 赛后补题情况 日期：2025.6.292025.6.292025.6.29 白天把前一场 CF 的题补完了，博客也都更新完毕，晚上把这一场的 A 题、B 题、C 题写了，都很简单，不打算写题解了。开了 D 题发现不会，猜测是一">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-29T05:49:49.000Z">
-<meta property="article:modified_time" content="2025-06-30T03:49:36.973Z">
+<meta property="article:published_time" content="2025-06-30T03:36:00.000Z">
+<meta property="article:modified_time" content="2025-06-30T03:49:26.350Z">
 <meta property="article:author" content="Feng5u">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[CF ER180] A. Race - Feng5u&#39;s blog</title>
+  <title>[AT ABC412] index - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -189,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[CF ER180] A. Race"></span>
+            <span id="subtitle" data-typed-text="[AT ABC412] index"></span>
           
         </div>
 
@@ -200,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-29 13:49" pubdate>
-          2025年6月29日 下午
+        <time datetime="2025-06-30 11:36" pubdate>
+          2025年6月30日 中午
         </time>
       </span>
     
@@ -212,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          148 字
+          217 字
         
       </span>
     
@@ -260,17 +261,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[CF ER180] A. Race</h1>
+            <h1 id="seo-header">[AT ABC412] index</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>Statements</h1>
-<p>给定三个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">a, x, y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>，问是否存在一个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>，满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>b</mi><mo>−</mo><mi>x</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mo>−</mo><mi>x</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|b-x|&lt;|a-x|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mord">∣</span></span></span></span> 且 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>b</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|b-y| &lt; |a-y|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord">∣</span></span></span></span>。</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>a</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>≤</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1 \leq a, x, y \leq 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span></p>
-<h1>Tutorial</h1>
-<p>采用几何的观点直观理解一下，就是在数轴上，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> 在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo separator="true">,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x,y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> 的中间。很显然，只有当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mi>max</mi><mo>⁡</mo><mo stretchy="false">{</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a &gt; \max\{x,y\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">max</span><span class="mopen">{</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">}</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&lt;</mo><mi>min</mi><mo>⁡</mo><mo stretchy="false">{</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">a &lt; \min\{x,y\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mopen">{</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">}</span></span></span></span> 时成立。</p>
-<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+                <h1>赛时过题情况</h1>
+<p><strong>日期</strong>： <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.6.28</mn></mrow><annotation encoding="application/x-tex">2025.6.28</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.6.28</span></span></span></span></p>
+<p>晚上七点半才吃上饭，比赛是八点开始的，于是顺理成章再次鸽掉一场比赛。所以赛时过题数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</p>
+<h1>赛后补题情况</h1>
+<p><strong>日期</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.6.29</mn></mrow><annotation encoding="application/x-tex">2025.6.29</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.6.29</span></span></span></span></p>
+<p>白天把前一场 CF 的题补完了，博客也都更新完毕，晚上把这一场的 A 题、B 题、C 题写了，都很简单，不打算写题解了。开了 D 题发现不会，猜测是一个暴力搜索毕竟数据范围很小。</p>
+<p><strong>日期</strong>：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.6.30</mn></mrow><annotation encoding="application/x-tex">2025.6.30</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.6.30</span></span></span></span></p>
+<p>看了一下 D 的题解，果然是暴力，没有发现最多只有两个环这个特性 TAT。上午写了 D 题，摸了会鱼就到了十一点，F 题开了发现也不会，懒得研究题解了所以开始写博客了。</p>
 
                 
               </div>
@@ -294,12 +297,12 @@
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/AtCoder/" class="category-chain-item">AtCoder</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Educational-Round-180/" class="category-chain-item">Educational Round 180</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/AtCoder/AtCoder-Beginner-Contest-412/" class="category-chain-item">AtCoder Beginner Contest 412</a>
   
   
 
@@ -315,6 +318,13 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+      
+    </div>
+  
 </div>
 
 
@@ -323,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[CF ER180] A. Race</div>
-      <div>https://feng5u.github.io/2025/06/29/CF-ER180-A-Race/</div>
+      <div>[AT ABC412] index</div>
+      <div>https://feng5u.github.io/2025/06/30/AT-ABC412-index/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月29日</div>
+          <div>2025年6月30日</div>
         </div>
       
       
@@ -368,9 +378,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/29/CF-ER180-B-Shrinking-Array/" title="[CF ER180] B. Shrinking Array">
+                      <a href="/2025/06/30/AT-ABC412-D-Make-2-Regular-Graph/" title="[AT ABC412] D - Make 2-Regular Graph">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[CF ER180] B. Shrinking Array</span>
+                        <span class="hidden-mobile">[AT ABC412] D - Make 2-Regular Graph</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -378,8 +388,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/28/hello-world/" title="Hello World!">
-                        <span class="hidden-mobile">Hello World!</span>
+                      <a href="/2025/06/29/CF-ER180-index/" title="[CF ER180]index">
+                        <span class="hidden-mobile">[CF ER180]index</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
