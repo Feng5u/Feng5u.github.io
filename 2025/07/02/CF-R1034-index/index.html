@@ -19,21 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="图匹配  1. 二分图最大匹配  1. 二分图最大匹配 匈牙利算法&#x2F;Hungarian 时间复杂度：O(∣V∣∣E∣)O(|V||E|)O(∣V∣∣E∣) 1234567891011121314151617181920212223void Hungarian(int n, int m, std::vector&lt;std::vector&lt;int&gt;&gt;&amp; g) &#123;">
+    <meta name="description" content="赛时过题情况 日期：2025.07.012025.07.012025.07.01 连鸽了两场比赛之后的第一场正式赛，是 Div.3 的场次。赛时很顺利地做完了 A、B、C、D，都是一发过。E 题交了一发之后 WA 掉了，感觉自己的思路没什么问题，应该是一些细节没处理好，懒得调了所以交给了 AI，结果 AI 写得一坨，不是很想调了就结束睡觉去了，看了眼表是 12:0712:0712:07。赛时过题数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图匹配">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/01/Graph/index.html">
+<meta property="og:title" content="[CF R1034] index">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/02/CF-R1034-index/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="图匹配  1. 二分图最大匹配  1. 二分图最大匹配 匈牙利算法&#x2F;Hungarian 时间复杂度：O(∣V∣∣E∣)O(|V||E|)O(∣V∣∣E∣) 1234567891011121314151617181920212223void Hungarian(int n, int m, std::vector&lt;std::vector&lt;int&gt;&gt;&amp; g) &#123;">
+<meta property="og:description" content="赛时过题情况 日期：2025.07.012025.07.012025.07.01 连鸽了两场比赛之后的第一场正式赛，是 Div.3 的场次。赛时很顺利地做完了 A、B、C、D，都是一发过。E 题交了一发之后 WA 掉了，感觉自己的思路没什么问题，应该是一些细节没处理好，懒得调了所以交给了 AI，结果 AI 写得一坨，不是很想调了就结束睡觉去了，看了眼表是 12:0712:0712:07。赛时过题数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-01T13:06:22.000Z">
-<meta property="article:modified_time" content="2025-07-01T13:10:30.962Z">
+<meta property="article:published_time" content="2025-07-02T04:17:33.000Z">
+<meta property="article:modified_time" content="2025-07-02T04:26:34.787Z">
 <meta property="article:author" content="Feng5u">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>图匹配 - Feng5u&#39;s blog</title>
+  <title>[CF R1034] index - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -189,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="图匹配"></span>
+            <span id="subtitle" data-typed-text="[CF R1034] index"></span>
           
         </div>
 
@@ -200,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-01 21:06" pubdate>
-          2025年7月1日 晚上
+        <time datetime="2025-07-02 12:17" pubdate>
+          2025年7月2日 中午
         </time>
       </span>
     
@@ -212,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          132 字
+          245 字
         
       </span>
     
@@ -223,7 +224,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -260,18 +261,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">图匹配</h1>
+            <h1 id="seo-header">[CF R1034] index</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>图匹配</h1>
-<ul>
-<li><a href="#1-%E4%BA%8C%E5%88%86%E5%9B%BE%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D">1. 二分图最大匹配</a></li>
-</ul>
-<h2 id="1-二分图最大匹配">1. 二分图最大匹配</h2>
-<p>匈牙利算法/Hungarian 时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>V</mi><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>E</mi><mi mathvariant="normal">∣</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(|V||E|)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord">∣∣</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">∣</span><span class="mclose">)</span></span></span></span></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Hungarian</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m, std::vector&lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; g)</span> </span>&#123;<br>  <span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">vis</span><span class="hljs-params">(m, <span class="hljs-number">0</span>)</span>, <span class="hljs-title">match</span><span class="hljs-params">(m, <span class="hljs-number">-1</span>)</span></span>;<br>  <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>, ans = <span class="hljs-number">0</span>;<br><br>  <span class="hljs-keyword">auto</span> dfs = [&amp;](<span class="hljs-keyword">auto</span> self, <span class="hljs-type">int</span> u) -&gt; <span class="hljs-type">bool</span> &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> v : g[u]) &#123;<br>      <span class="hljs-keyword">if</span> (vis[v] == cnt) <span class="hljs-keyword">continue</span>;<br>      vis[v] = cnt;<br>      <span class="hljs-keyword">if</span> (match[v] == <span class="hljs-number">-1</span> || <span class="hljs-built_in">self</span>(self, match[v])) &#123;<br>        match[v] = u;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>      &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>  &#125;;<br><br>  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>    cnt++;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">dfs</span>(dfs, i)) ans++;<br>  &#125;<br>  <br>  std::cout &lt;&lt; ans &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1>赛时过题情况</h1>
+<p><strong>日期：</strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.07.01</mn></mrow><annotation encoding="application/x-tex">2025.07.01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.07.01</span></span></span></span></p>
+<p>连鸽了两场比赛之后的第一场正式赛，是 Div.3 的场次。赛时很顺利地做完了 A、B、C、D，都是一发过。E 题交了一发之后 WA 掉了，感觉自己的思路没什么问题，应该是一些细节没处理好，懒得调了所以交给了 AI，结果 AI 写得一坨，不是很想调了就结束睡觉去了，看了眼表是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>:</mo><mn>07</mn></mrow><annotation encoding="application/x-tex">12:07</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">12</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">07</span></span></span></span>。赛时过题数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span>。</p>
+<h1>赛后补题情况</h1>
+<p><strong>日期：</strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.07.02</mn></mrow><annotation encoding="application/x-tex">2025.07.02</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.07.02</span></span></span></span></p>
+<p>看了一眼 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 题的题解，和我的思路一样，也可以说是细节没有处理好，，差了一点点。然后看到 F 题的难度评级不是很高，就试着自己做了做，结果比 E 题简单多了。赛时错失一道题 TAT。G 题看了一眼，感觉不太会，下午再来补 G 题，顺便把题解写了。</p>
 
                 
               </div>
@@ -290,13 +290,20 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%AE%97%E6%B3%95%E6%9D%BF%E5%AD%90%E5%BA%93/" class="category-chain-item">算法板子库</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/" class="category-chain-item">比赛题解</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E7%AE%97%E6%B3%95%E6%9D%BF%E5%AD%90%E5%BA%93/%E5%9B%BE%E8%AE%BA/" class="category-chain-item">图论</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/" class="category-chain-item">Codeforces</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Round-1034/" class="category-chain-item">Round 1034</a>
+  
+  
+
   
 
   
@@ -309,6 +316,13 @@
     </div>
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+      
+    </div>
+  
 </div>
 
 
@@ -317,8 +331,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>图匹配</div>
-      <div>https://feng5u.github.io/2025/07/01/Graph/</div>
+      <div>[CF R1034] index</div>
+      <div>https://feng5u.github.io/2025/07/02/CF-R1034-index/</div>
     </div>
     <div class="license-meta">
       
@@ -330,7 +344,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月1日</div>
+          <div>2025年7月2日</div>
         </div>
       
       
@@ -362,18 +376,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/02/CF-R1034-index/" title="[CF R1034] index">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[CF R1034] index</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/30/AT-ABC412-F-Socks-4/" title="[AT ABC412] F - Socks 4">
-                        <span class="hidden-mobile">[AT ABC412] F - Socks 4</span>
+                      <a href="/2025/07/01/Graph/" title="图匹配">
+                        <span class="hidden-mobile">图匹配</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
