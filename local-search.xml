@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>开发日志 - 计</title>
+    <link href="/2025/07/07/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-%E8%AE%A1/"/>
+    <url>/2025/07/07/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-%E8%AE%A1/</url>
+    
+    <content type="html"><![CDATA[<p><strong>日期：</strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.07.07</mn></mrow><annotation encoding="application/x-tex">2025.07.07</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.07.07</span></span></span></span></p><p>今天是“计”这个想法诞生的第一天，主要是希望给自己做一款自己用的惯的计划类软件，“计”这个名字也是因为懒得想了所以直接取了一个单字，不过为了稍微有点说法，所以其实是用了文言文的说法。</p><p>目前打算实现以下板块：</p><ul><li>以目标为导向的计划清单；</li><li>某个时间跨度下的计划清单（日历视图）；</li></ul><p>其中，更细致的功能如下：</p><ul><li>显示计划的优先级；</li><li>可以设置重复任务；</li><li>日历视图里，点开单日、单周时可以显示详细的 24 小时安排，否则计划的日历显示默认按照字典序排序；</li><li>单个任务的编辑可以调整优先级和持续时间；</li><li>可以在日历视图生成一个模板导出与导入（仅限本地）；</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>开发日志</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[CCPC 2025 Shanghai] index</title>
     <link href="/2025/07/03/CCPC-2025-Shanghai-index/"/>
     <url>/2025/07/03/CCPC-2025-Shanghai-index/</url>
