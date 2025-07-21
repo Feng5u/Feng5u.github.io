@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="欧拉路径的存在条件：  首先，将图中的边都视为无向边时，图是连通的； 其次，在不同的图中，分别有以下要求：  有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度； 有向图欧拉回路：所有点入度等于出度； 无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数； 无向图欧拉回路：所有点的度数都是偶数。     12345678910111213141516">
+    <meta name="description" content="Nim 游戏规则：有若干堆石子，每一堆的个数为 aia_iai​，每次可以在任意堆中取走任意数量的石子（至少为 1）。  当 a1⊕a2⊕⋯⊕an&#x3D;0a_1 \oplus a_2 \oplus\dots\oplus a_n &#x3D; 0a1​⊕a2​⊕⋯⊕an​&#x3D;0 时，先手必败； 否则，先手必胜。  证明可以通过以下两个定理：  必胜态的后继状态中，一定有一个是必败态； 必败态的后继状态一定都是必胜态">
 <meta property="og:type" content="article">
-<meta property="og:title" content="欧拉路径">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/21/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/index.html">
+<meta property="og:title" content="Nim 游戏">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/21/Nim-%E6%B8%B8%E6%88%8F/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="欧拉路径的存在条件：  首先，将图中的边都视为无向边时，图是连通的； 其次，在不同的图中，分别有以下要求：  有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度； 有向图欧拉回路：所有点入度等于出度； 无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数； 无向图欧拉回路：所有点的度数都是偶数。     12345678910111213141516">
+<meta property="og:description" content="Nim 游戏规则：有若干堆石子，每一堆的个数为 aia_iai​，每次可以在任意堆中取走任意数量的石子（至少为 1）。  当 a1⊕a2⊕⋯⊕an&#x3D;0a_1 \oplus a_2 \oplus\dots\oplus a_n &#x3D; 0a1​⊕a2​⊕⋯⊕an​&#x3D;0 时，先手必败； 否则，先手必胜。  证明可以通过以下两个定理：  必胜态的后继状态中，一定有一个是必败态； 必败态的后继状态一定都是必胜态">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-21T12:03:53.000Z">
-<meta property="article:modified_time" content="2025-07-21T12:25:30.407Z">
+<meta property="article:published_time" content="2025-07-21T13:16:08.000Z">
+<meta property="article:modified_time" content="2025-07-21T13:27:54.564Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="Eulerian Graph">
+<meta property="article:tag" content="Game">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>欧拉路径 - Feng5u&#39;s blog</title>
+  <title>Nim 游戏 - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="欧拉路径"></span>
+            <span id="subtitle" data-typed-text="Nim 游戏"></span>
           
         </div>
 
@@ -201,7 +201,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-21 20:03" pubdate>
+        <time datetime="2025-07-21 21:16" pubdate>
           2025年7月21日 晚上
         </time>
       </span>
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          280 字
+          185 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -261,24 +261,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">欧拉路径</h1>
+            <h1 id="seo-header">Nim 游戏</h1>
             
             
               <div class="markdown-body">
                 
-                <p>欧拉路径的存在条件：</p>
+                <p>Nim 游戏规则：有若干堆石子，每一堆的个数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，每次可以在任意堆中取走任意数量的石子（至少为 1）。</p>
+<ul>
+<li>当 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⊕</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⊕</mo><mo>⋯</mo><mo>⊕</mo><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a_1 \oplus a_2 \oplus\dots\oplus a_n = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 时，先手必败；</li>
+<li>否则，先手必胜。</li>
+</ul>
+<p>证明可以通过以下两个定理：</p>
 <ol>
-<li>首先，将图中的边都视为无向边时，图是连通的；</li>
-<li>其次，在不同的图中，分别有以下要求：
-<ol>
-<li>有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度；</li>
-<li>有向图欧拉回路：所有点入度等于出度；</li>
-<li>无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数；</li>
-<li>无向图欧拉回路：所有点的度数都是偶数。</li>
+<li>必胜态的后继状态中，一定有一个是必败态；</li>
+<li>必败态的后继状态一定都是必胜态。</li>
 </ol>
-</li>
-</ol>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//有向图</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">d_Hierholzer</span> &#123;<br>	<span class="hljs-type">int</span> n, st;<br>	std::vector&lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt; adj;<br>	std::vector&lt;<span class="hljs-type">int</span>&gt; hd, in, stk;<br><br>	<span class="hljs-built_in">d_Hierholzer</span>(<span class="hljs-type">int</span> n) &#123;<br>		<span class="hljs-built_in">init</span>(n);<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br>		<span class="hljs-keyword">this</span>-&gt;n = n;<br>		adj.<span class="hljs-built_in">assign</span>(n, &#123;&#125;);<br>		hd.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>		in.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>		stk.<span class="hljs-built_in">clear</span>();<br>		st = <span class="hljs-number">-1</span>;<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v)</span> </span>&#123;<br>		adj[u].<span class="hljs-built_in">push_back</span>(v);<br>		in[v]++;<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-comment">//根据不同的路径要求和图的类型，判断是否存在对应路径。</span><br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> id)</span> </span>&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> &amp;i = hd[id]; i &lt; adj[id].<span class="hljs-built_in">size</span>();) &#123;<br>			<span class="hljs-built_in">dfs</span>(adj[id][i++]);<br>		&#125;<br>		stk.<span class="hljs-built_in">push_back</span>(id);<br>	&#125;<br><br>	<span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-built_in">dfs</span>(st == <span class="hljs-number">-1</span> ? <span class="hljs-number">0</span> : st);<br>		<span class="hljs-keyword">return</span> stk;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Nim</span> &#123;<br>  <span class="hljs-type">int</span> n;<br>  std::vector&lt;<span class="hljs-type">int</span>&gt; a;<br>  <br>  <span class="hljs-built_in">Nim</span>(<span class="hljs-type">int</span> n) &#123;<br>		<span class="hljs-built_in">init</span>(n);<br>  &#125;<br>  <br>  <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br>		<span class="hljs-keyword">this</span>-&gt;n = n;<br>    a.<span class="hljs-built_in">resize</span>(n);<br>  &#125;<br>  <br>  <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">play</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> sum = <span class="hljs-number">0</span>;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>			std::cin &gt;&gt; a[i];<br>    	sum ^= a[i];<br>    &#125;<br>    <span class="hljs-comment">//默认 Alice 先手</span><br>    <span class="hljs-keyword">if</span> (Sum == <span class="hljs-number">0</span>) &#123;<br>			std::cout &lt;&lt; <span class="hljs-string">&quot;Bob\n&quot;</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span> std::cout &lt;&lt; <span class="hljs-string">&quot;Alice\n&quot;</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -302,7 +300,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/%E5%9B%BE%E8%AE%BA/" class="category-chain-item">图论</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/%E6%95%B0%E5%AD%A6/" class="category-chain-item">数学</a>
   
   
 
@@ -319,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Eulerian-Graph/" class="print-no-link">#Eulerian Graph</a>
+        <a href="/tags/Game/" class="print-no-link">#Game</a>
       
     </div>
   
@@ -331,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>欧拉路径</div>
-      <div>https://feng5u.github.io/2025/07/21/欧拉路径/</div>
+      <div>Nim 游戏</div>
+      <div>https://feng5u.github.io/2025/07/21/Nim-游戏/</div>
     </div>
     <div class="license-meta">
       
@@ -376,9 +374,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/21/Nim-%E6%B8%B8%E6%88%8F/" title="Nim 游戏">
+                      <a href="/2025/07/21/SG-%E5%AE%9A%E7%90%86/" title="SG 定理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nim 游戏</span>
+                        <span class="hidden-mobile">SG 定理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -386,8 +384,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/21/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0721-index/" title="[25赛季暑期集训 0721] index">
-                        <span class="hidden-mobile">[25赛季暑期集训 0721] index</span>
+                      <a href="/2025/07/21/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/" title="欧拉路径">
+                        <span class="hidden-mobile">欧拉路径</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

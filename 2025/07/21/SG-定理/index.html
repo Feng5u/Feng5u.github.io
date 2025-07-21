@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="欧拉路径的存在条件：  首先，将图中的边都视为无向边时，图是连通的； 其次，在不同的图中，分别有以下要求：  有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度； 有向图欧拉回路：所有点入度等于出度； 无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数； 无向图欧拉回路：所有点的度数都是偶数。     12345678910111213141516">
+    <meta name="description" content="SG 定理如下： 在一个有向图游戏中，设一个状态 xxx 的后继状态为 y1,y2,…,yky_1, y_2, \dots,y_ky1​,y2​,…,yk​，定义一个状态的 SG 函数为： SG(x)&#x3D;mex{SG(y1),SG(y2),…,SG(yk)}\text{SG}(x) &#x3D; \text{mex}\{\text{SG}(y_1), \text{SG}(y_2), \dots, \text{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="欧拉路径">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/21/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/index.html">
+<meta property="og:title" content="SG 定理">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/21/SG-%E5%AE%9A%E7%90%86/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="欧拉路径的存在条件：  首先，将图中的边都视为无向边时，图是连通的； 其次，在不同的图中，分别有以下要求：  有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度； 有向图欧拉回路：所有点入度等于出度； 无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数； 无向图欧拉回路：所有点的度数都是偶数。     12345678910111213141516">
+<meta property="og:description" content="SG 定理如下： 在一个有向图游戏中，设一个状态 xxx 的后继状态为 y1,y2,…,yky_1, y_2, \dots,y_ky1​,y2​,…,yk​，定义一个状态的 SG 函数为： SG(x)&#x3D;mex{SG(y1),SG(y2),…,SG(yk)}\text{SG}(x) &#x3D; \text{mex}\{\text{SG}(y_1), \text{SG}(y_2), \dots, \text{">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-21T12:03:53.000Z">
-<meta property="article:modified_time" content="2025-07-21T12:25:30.407Z">
+<meta property="article:published_time" content="2025-07-21T13:34:42.000Z">
+<meta property="article:modified_time" content="2025-07-21T13:47:17.191Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="Eulerian Graph">
+<meta property="article:tag" content="Game">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>欧拉路径 - Feng5u&#39;s blog</title>
+  <title>SG 定理 - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="欧拉路径"></span>
+            <span id="subtitle" data-typed-text="SG 定理"></span>
           
         </div>
 
@@ -201,7 +201,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-21 20:03" pubdate>
+        <time datetime="2025-07-21 21:34" pubdate>
           2025年7月21日 晚上
         </time>
       </span>
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          280 字
+          142 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -261,24 +261,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">欧拉路径</h1>
+            <h1 id="seo-header">SG 定理</h1>
             
             
               <div class="markdown-body">
                 
-                <p>欧拉路径的存在条件：</p>
-<ol>
-<li>首先，将图中的边都视为无向边时，图是连通的；</li>
-<li>其次，在不同的图中，分别有以下要求：
-<ol>
-<li>有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度；</li>
-<li>有向图欧拉回路：所有点入度等于出度；</li>
-<li>无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数；</li>
-<li>无向图欧拉回路：所有点的度数都是偶数。</li>
-</ol>
-</li>
-</ol>
- <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//有向图</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">d_Hierholzer</span> &#123;<br>	<span class="hljs-type">int</span> n, st;<br>	std::vector&lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt; adj;<br>	std::vector&lt;<span class="hljs-type">int</span>&gt; hd, in, stk;<br><br>	<span class="hljs-built_in">d_Hierholzer</span>(<span class="hljs-type">int</span> n) &#123;<br>		<span class="hljs-built_in">init</span>(n);<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br>		<span class="hljs-keyword">this</span>-&gt;n = n;<br>		adj.<span class="hljs-built_in">assign</span>(n, &#123;&#125;);<br>		hd.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>		in.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>		stk.<span class="hljs-built_in">clear</span>();<br>		st = <span class="hljs-number">-1</span>;<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v)</span> </span>&#123;<br>		adj[u].<span class="hljs-built_in">push_back</span>(v);<br>		in[v]++;<br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-comment">//根据不同的路径要求和图的类型，判断是否存在对应路径。</span><br>	&#125;<br><br>	<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> id)</span> </span>&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> &amp;i = hd[id]; i &lt; adj[id].<span class="hljs-built_in">size</span>();) &#123;<br>			<span class="hljs-built_in">dfs</span>(adj[id][i++]);<br>		&#125;<br>		stk.<span class="hljs-built_in">push_back</span>(id);<br>	&#125;<br><br>	<span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-built_in">dfs</span>(st == <span class="hljs-number">-1</span> ? <span class="hljs-number">0</span> : st);<br>		<span class="hljs-keyword">return</span> stk;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <p>SG 定理如下：</p>
+<p>在一个有向图游戏中，设一个状态 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 的后继状态为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_1, y_2, \dots,y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，定义一个状态的 SG 函数为：</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>SG</mtext><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>mex</mtext><mo stretchy="false">{</mo><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>y</mi><mi>k</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\text{SG}(x) = \text{mex}\{\text{SG}(y_1), \text{SG}(y_2), \dots, \text{SG}(y_k)\}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">mex</span></span><span class="mopen">{</span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)}</span></span></span></span></span></p>
+<p>对于一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个有向图游戏组成的组合游戏，分别有起点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>s</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>s</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">s_1,s_2,\dots,s_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，若有</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo>⊕</mo><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>s</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo>⊕</mo><mo>⋯</mo><mo>⊕</mo><mtext>SG</mtext><mo stretchy="false">(</mo><msub><mi>s</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{SG}(s_1)\oplus\text{SG}(s_2)\oplus \dots\oplus \text{SG}(s_n) = 0
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⊕</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">SG</span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></p>
+<p>则先手必败。</p>
 
                 
               </div>
@@ -302,7 +297,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/%E5%9B%BE%E8%AE%BA/" class="category-chain-item">图论</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/%E6%95%B0%E5%AD%A6/" class="category-chain-item">数学</a>
   
   
 
@@ -319,7 +314,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Eulerian-Graph/" class="print-no-link">#Eulerian Graph</a>
+        <a href="/tags/Game/" class="print-no-link">#Game</a>
       
     </div>
   
@@ -331,8 +326,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>欧拉路径</div>
-      <div>https://feng5u.github.io/2025/07/21/欧拉路径/</div>
+      <div>SG 定理</div>
+      <div>https://feng5u.github.io/2025/07/21/SG-定理/</div>
     </div>
     <div class="license-meta">
       
@@ -376,18 +371,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/21/Nim-%E6%B8%B8%E6%88%8F/" title="Nim 游戏">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nim 游戏</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/21/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0721-index/" title="[25赛季暑期集训 0721] index">
-                        <span class="hidden-mobile">[25赛季暑期集训 0721] index</span>
+                      <a href="/2025/07/21/Nim-%E6%B8%B8%E6%88%8F/" title="Nim 游戏">
+                        <span class="hidden-mobile">Nim 游戏</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
