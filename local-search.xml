@@ -17,8 +17,6 @@
       
       <category>图论</category>
       
-      <category>欧拉路径</category>
-      
     </categories>
     
     
@@ -447,9 +445,9 @@
     
     <tags>
       
-      <tag>Greedy</tag>
-      
       <tag>Constructive Algorithms</tag>
+      
+      <tag>Greedy</tag>
       
     </tags>
     
