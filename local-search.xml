@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>欧拉路径</title>
+    <link href="/2025/07/21/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/"/>
+    <url>/2025/07/21/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/</url>
+    
+    <content type="html"><![CDATA[<p>欧拉路径的存在条件：</p><ol><li>首先，将图中的边都视为无向边时，图是连通的；</li><li>其次，在不同的图中，分别有以下要求：<ol><li>有向图欧拉路径：恰好存在一个点出度比入度大一，一个点入度比出度大一，其余节点出度等于入度；</li><li>有向图欧拉回路：所有点入度等于出度；</li><li>无向图欧拉路径：图中恰好存在两个点度数是奇数，其余点度数为偶数；</li><li>无向图欧拉回路：所有点的度数都是偶数。</li></ol></li></ol> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//有向图</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">d_Hierholzer</span> &#123;<br><span class="hljs-type">int</span> n, st;<br>std::vector&lt;std::vector&lt;<span class="hljs-type">int</span>&gt;&gt; adj;<br>std::vector&lt;<span class="hljs-type">int</span>&gt; hd, in, stk;<br><br><span class="hljs-built_in">d_Hierholzer</span>(<span class="hljs-type">int</span> n) &#123;<br><span class="hljs-built_in">init</span>(n);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> </span>&#123;<br><span class="hljs-keyword">this</span>-&gt;n = n;<br>adj.<span class="hljs-built_in">assign</span>(n, &#123;&#125;);<br>hd.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>in.<span class="hljs-built_in">assign</span>(n, <span class="hljs-number">0</span>);<br>stk.<span class="hljs-built_in">clear</span>();<br>st = <span class="hljs-number">-1</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">addEdge</span><span class="hljs-params">(<span class="hljs-type">int</span> u, <span class="hljs-type">int</span> v)</span> </span>&#123;<br>adj[u].<span class="hljs-built_in">push_back</span>(v);<br>in[v]++;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">check</span><span class="hljs-params">()</span> </span>&#123;<br><span class="hljs-comment">//根据不同的路径要求和图的类型，判断是否存在对应路径。</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-type">int</span> id)</span> </span>&#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> &amp;i = hd[id]; i &lt; adj[id].<span class="hljs-built_in">size</span>();) &#123;<br><span class="hljs-built_in">dfs</span>(adj[id][i++]);<br>&#125;<br>stk.<span class="hljs-built_in">push_back</span>(id);<br>&#125;<br><br><span class="hljs-function">std::vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">work</span><span class="hljs-params">()</span> </span>&#123;<br><span class="hljs-built_in">dfs</span>(st == <span class="hljs-number">-1</span> ? <span class="hljs-number">0</span> : st);<br><span class="hljs-keyword">return</span> stk;<br>&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法模板</category>
+      
+      <category>图论</category>
+      
+      <category>欧拉路径</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Eulerian Graph</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[25赛季暑期集训 0721] index</title>
     <link href="/2025/07/21/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0721-index/"/>
     <url>/2025/07/21/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0721-index/</url>
@@ -232,7 +261,7 @@
   
   
   <entry>
-    <title></title>
+    <title>24~25年暑假训练记录</title>
     <link href="/2025/07/13/%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/"/>
     <url>/2025/07/13/%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/</url>
     
@@ -418,9 +447,9 @@
     
     <tags>
       
-      <tag>Constructive Algorithms</tag>
-      
       <tag>Greedy</tag>
+      
+      <tag>Constructive Algorithms</tag>
       
     </tags>
     
