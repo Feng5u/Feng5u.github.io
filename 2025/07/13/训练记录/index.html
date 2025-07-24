@@ -27,7 +27,7 @@
 <meta property="og:description" content="学习基本算法（参考网站），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录； 板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。  待补充算法：01BFS、哈希、基本博弈论 日期：2025.07.15 2121H - Ice Baby 自己想到的：既然对于所有的 1≤k≤n1 \leq k \leq n1≤k≤n 都要输出对应的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-13T15:09:43.000Z">
-<meta property="article:modified_time" content="2025-07-22T13:20:29.617Z">
+<meta property="article:modified_time" content="2025-07-24T02:52:59.197Z">
 <meta property="article:author" content="Feng5u">
 <meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.7k 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          13 分钟
+          15 分钟
         
       </span>
     
@@ -321,6 +321,13 @@ dp_j = \max\{l, dp_{j-1}\}, &amp; dp_{j-1} \leq r
 <p>早上补了补觉，就没有写题。</p>
 <hr>
 <p>晚上做了一道 01BFS 的板子题，挺简单的。</p>
+<h1>日期：2025.07.23</h1>
+<p>把前几天集训的题目补了补，不过主要是重看了一遍做过的题，没做出来的题确实不是现在应该努力的方向。</p>
+<h1>日期：2025.07.24</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2126/F">2126F - 1-1-1, Free Tree!</a></p>
+<p>**自己想到的：**利用 map 维护与一个点相连的各种颜色的边的权重，然后利用上一次询问的答案进行修改，避免暴力扫描所有边。</p>
+<p>**没有想到的：**由于每一次修改都会保留，所以当成单纯的图来做的话，每次修改之后即使使用 map 也需要重新扫描所有边。所以需要利用树的特性，将某个节点的父亲与孩子分开处理即可。</p>
+<p>虽然有没有想到的地方，但是感觉这个题还是好简单，完全不像是 2000 分的题。</p>
 
                 
               </div>
