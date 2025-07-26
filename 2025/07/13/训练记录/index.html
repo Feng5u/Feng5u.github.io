@@ -19,15 +19,15 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="学习基本算法（参考网站），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录； 板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。  待补充算法：哈希、基本博弈论、所有最短路算法。 日期：2025.07.15 2121H - Ice Baby 自己想到的：既然对于所有的 1≤k≤n1 \leq k \leq n1≤k≤n 都要输出">
+    <meta name="description" content="学习基本算法（参考网站），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录； 板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。  待补充算法：哈希、基本博弈论、所有最短路算法，背包。 日期：2025.07.15 2121H - Ice Baby 自己想到的：既然对于所有的 1≤k≤n1 \leq k \leq n1≤k≤n 都">
 <meta property="og:type" content="article">
 <meta property="og:title" content="24~25年暑假训练记录">
 <meta property="og:url" content="https://feng5u.github.io/2025/07/13/%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="学习基本算法（参考网站），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录； 板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。  待补充算法：哈希、基本博弈论、所有最短路算法。 日期：2025.07.15 2121H - Ice Baby 自己想到的：既然对于所有的 1≤k≤n1 \leq k \leq n1≤k≤n 都要输出">
+<meta property="og:description" content="学习基本算法（参考网站），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录； 板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。  待补充算法：哈希、基本博弈论、所有最短路算法，背包。 日期：2025.07.15 2121H - Ice Baby 自己想到的：既然对于所有的 1≤k≤n1 \leq k \leq n1≤k≤n 都">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-13T15:09:43.000Z">
-<meta property="article:modified_time" content="2025-07-25T02:50:07.812Z">
+<meta property="article:modified_time" content="2025-07-26T10:57:06.073Z">
 <meta property="article:author" content="Feng5u">
 <meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -270,7 +270,7 @@
 <li>学习基本算法（<a target="_blank" rel="noopener" href="https://www.cnblogs.com/WIDA/p/17633758.html">参考网站</a>），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录；</li>
 <li>板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。</li>
 </ol>
-<p>待补充算法：哈希、基本博弈论、所有最短路算法。</p>
+<p>待补充算法：哈希、基本博弈论、所有最短路算法，背包。</p>
 <h1><strong>日期：2025.07.15</strong></h1>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2121/H">2121H - Ice Baby</a></p>
 <p><strong>自己想到的</strong>：既然对于所有的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1 \leq k \leq n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 都要输出对应的解，肯定要采用递推的方法。同时注意到，当加入一个新的元素时，最长非降子序列的长度最多增加一，且一定满足非降，且增加一时，一定是产生了一个更长的后缀非降子序列。因此，只需要维护后缀非降子序列并进行转移即可。想到的方法是：维护后缀非降子序列在不同长度下最后一个元素的取值范围。由于随着后缀非降子序列的长度，最后一个元素的取值也是非降的，因此只需要维护对应的下界即可。然而只想到了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> 的转移，显然是超时的。</p>
