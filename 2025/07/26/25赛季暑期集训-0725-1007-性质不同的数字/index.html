@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="赛时过题情况 被队友狠狠压力了。 只做出来了 080808，然后对着 040404 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。 赛时过题数：555">
+    <meta name="description" content="Statement 给定 nnn 个区间，定义两个整数性质不同当且仅当存在一个区间，两个整数有且只有一个位于该区间中。问最多可以取出多少个整数，使它们两两之间性质不同。 1≤n≤2×1051 \leq n \leq 2 \times 10^51≤n≤2×105 Tutorial 容易想到，只需要考虑所有区间的端点即可。将问题转化成：对于所有区间端点，有多少种不同的区间覆盖情况。也就是说，如果两个点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[25赛季暑期集训 0725] index">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/25/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-index/index.html">
+<meta property="og:title" content="[25赛季暑期集训 0725] 1007 性质不同的数字">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1007-%E6%80%A7%E8%B4%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E6%95%B0%E5%AD%97/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="赛时过题情况 被队友狠狠压力了。 只做出来了 080808，然后对着 040404 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。 赛时过题数：555">
+<meta property="og:description" content="Statement 给定 nnn 个区间，定义两个整数性质不同当且仅当存在一个区间，两个整数有且只有一个位于该区间中。问最多可以取出多少个整数，使它们两两之间性质不同。 1≤n≤2×1051 \leq n \leq 2 \times 10^51≤n≤2×105 Tutorial 容易想到，只需要考虑所有区间的端点即可。将问题转化成：对于所有区间端点，有多少种不同的区间覆盖情况。也就是说，如果两个点">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-25T10:50:29.000Z">
-<meta property="article:modified_time" content="2025-07-25T10:53:20.874Z">
+<meta property="article:published_time" content="2025-07-26T06:12:44.000Z">
+<meta property="article:modified_time" content="2025-07-26T06:17:48.347Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Hash">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[25赛季暑期集训 0725] index - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训 0725] 1007 性质不同的数字 - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[25赛季暑期集训 0725] index"></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训 0725] 1007 性质不同的数字"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-25 18:50" pubdate>
-          2025年7月25日 晚上
+        <time datetime="2025-07-26 14:12" pubdate>
+          2025年7月26日 下午
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          73 字
+          234 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -261,15 +261,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[25赛季暑期集训 0725] index</h1>
+            <h1 id="seo-header">[25赛季暑期集训 0725] 1007 性质不同的数字</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>赛时过题情况</h1>
-<p>被队友狠狠压力了。</p>
-<p>只做出来了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>08</mn></mrow><annotation encoding="application/x-tex">08</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">08</span></span></span></span>，然后对着 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>04</mn></mrow><annotation encoding="application/x-tex">04</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">04</span></span></span></span> 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。</p>
-<p>赛时过题数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span></span></span></span></p>
+                <h1>Statement</h1>
+<p>给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个区间，定义两个整数性质不同当且仅当存在一个区间，两个整数有且只有一个位于该区间中。问最多可以取出多少个整数，使它们两两之间性质不同。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 2 \times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></p>
+<h1>Tutorial</h1>
+<p>容易想到，只需要考虑所有区间的端点即可。将问题转化成：对于所有区间端点，有多少种不同的区间覆盖情况。也就是说，如果两个点被不同的区间覆盖，那么它们的性质就不同。为了记录区间覆盖情况，可以用随机化哈希，为每一个区间赋随机的哈希值，遇到左端点和右端点时分别异或，异或值就代表了被多少个不同的区间覆盖。</p>
+<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，主要来自于对区间排序</p>
 
                 
               </div>
@@ -317,7 +319,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+        <a href="/tags/Hash/" class="print-no-link">#Hash</a>
       
     </div>
   
@@ -329,8 +331,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[25赛季暑期集训 0725] index</div>
-      <div>https://feng5u.github.io/2025/07/25/25赛季暑期集训-0725-index/</div>
+      <div>[25赛季暑期集训 0725] 1007 性质不同的数字</div>
+      <div>https://feng5u.github.io/2025/07/26/25赛季暑期集训-0725-1007-性质不同的数字/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +344,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月25日</div>
+          <div>2025年7月26日</div>
         </div>
       
       
@@ -374,9 +376,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1008-01%E7%8E%AF/" title="[25赛季暑期集训 0725] 1008 01环">
+                      <a href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1009-%E7%BA%BF%E6%AE%B5%E6%9F%93%E8%89%B2/" title="[25赛季暑期集训 0725] 1009 线段染色">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[25赛季暑期集训 0725] 1008 01环</span>
+                        <span class="hidden-mobile">[25赛季暑期集训 0725] 1009 线段染色</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -384,8 +386,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/24/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0724-E-LCM-Plus-GCD/" title="[25赛季暑期集训 0724] E - LCM Plus GCD">
-                        <span class="hidden-mobile">[25赛季暑期集训 0724] E - LCM Plus GCD</span>
+                      <a href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1012-%E6%A0%B8%E5%BF%83%E5%85%B1%E6%8C%AF/" title="[25赛季暑期集训 0725] 1012 核心共振">
+                        <span class="hidden-mobile">[25赛季暑期集训 0725] 1012 核心共振</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

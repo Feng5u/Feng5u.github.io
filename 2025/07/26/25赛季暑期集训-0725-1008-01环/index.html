@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="赛时过题情况 被队友狠狠压力了。 只做出来了 080808，然后对着 040404 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。 赛时过题数：555">
+    <meta name="description" content="Statement 给定一个 010101 环，每次可以进行以下两种操作之一：  将 aia_iai​ 和 ai+1a_{i + 1}ai+1​ 翻转； 将 aia_iai​ 从 000 变成 111 或者从 111 变成 000。  问将该环变成 010101 交替排列的形式，最少需要几步。 1≤n≤1061 \leq n \leq 10^61≤n≤106 Tutorial 将 a0a_0a0​">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[25赛季暑期集训 0725] index">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/25/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-index/index.html">
+<meta property="og:title" content="[25赛季暑期集训 0725] 1008 01环">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1008-01%E7%8E%AF/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="赛时过题情况 被队友狠狠压力了。 只做出来了 080808，然后对着 040404 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。 赛时过题数：555">
+<meta property="og:description" content="Statement 给定一个 010101 环，每次可以进行以下两种操作之一：  将 aia_iai​ 和 ai+1a_{i + 1}ai+1​ 翻转； 将 aia_iai​ 从 000 变成 111 或者从 111 变成 000。  问将该环变成 010101 交替排列的形式，最少需要几步。 1≤n≤1061 \leq n \leq 10^61≤n≤106 Tutorial 将 a0a_0a0​">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-25T10:50:29.000Z">
-<meta property="article:modified_time" content="2025-07-25T10:53:20.874Z">
+<meta property="article:published_time" content="2025-07-26T05:19:33.000Z">
+<meta property="article:modified_time" content="2025-07-26T05:24:38.706Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Greedy">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[25赛季暑期集训 0725] index - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训 0725] 1008 01环 - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[25赛季暑期集训 0725] index"></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训 0725] 1008 01环"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-25 18:50" pubdate>
-          2025年7月25日 晚上
+        <time datetime="2025-07-26 13:19" pubdate>
+          2025年7月26日 下午
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          73 字
+          199 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -261,15 +261,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[25赛季暑期集训 0725] index</h1>
+            <h1 id="seo-header">[25赛季暑期集训 0725] 1008 01环</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>赛时过题情况</h1>
-<p>被队友狠狠压力了。</p>
-<p>只做出来了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>08</mn></mrow><annotation encoding="application/x-tex">08</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">08</span></span></span></span>，然后对着 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>04</mn></mrow><annotation encoding="application/x-tex">04</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">04</span></span></span></span> 发呆了一整场。以后还是要学会及时转向。最后评测机烂掉了，导致最后一发正确的代码赛后才测出来。</p>
-<p>赛时过题数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span></span></span></span></p>
+                <h1>Statement</h1>
+<p>给定一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 环，每次可以进行以下两种操作之一：</p>
+<ol>
+<li>将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">a_{i + 1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span> 翻转；</li>
+<li>将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 或者从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</li>
+</ol>
+<p>问将该环变成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 交替排列的形式，最少需要几步。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></p>
+<h1>Tutorial</h1>
+<p>将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">a_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 视为起点，则最后一共有两种形式，分别为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>010101</mn><mo>…</mo></mrow><annotation encoding="application/x-tex">010101\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">010101</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>101010</mn><mo>…</mo></mrow><annotation encoding="application/x-tex">101010\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">101010</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span></span></span></span>，对两种情况分别处理，采用一种贪心策略：如果某一个位置与下一个位置交换之后符合当前情况，则交换，否则只改变这一个。同时，由于这是一个环，最后一个元素可以与第一个元素交换，可以从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">a_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 开始扫一遍，再从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 开始扫一遍。</p>
+<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
 
                 
               </div>
@@ -317,7 +324,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+        <a href="/tags/Greedy/" class="print-no-link">#Greedy</a>
       
     </div>
   
@@ -329,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[25赛季暑期集训 0725] index</div>
-      <div>https://feng5u.github.io/2025/07/25/25赛季暑期集训-0725-index/</div>
+      <div>[25赛季暑期集训 0725] 1008 01环</div>
+      <div>https://feng5u.github.io/2025/07/26/25赛季暑期集训-0725-1008-01环/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月25日</div>
+          <div>2025年7月26日</div>
         </div>
       
       
@@ -374,9 +381,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1008-01%E7%8E%AF/" title="[25赛季暑期集训 0725] 1008 01环">
+                      <a href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1012-%E6%A0%B8%E5%BF%83%E5%85%B1%E6%8C%AF/" title="[25赛季暑期集训 0725] 1012 核心共振">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[25赛季暑期集训 0725] 1008 01环</span>
+                        <span class="hidden-mobile">[25赛季暑期集训 0725] 1012 核心共振</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -384,8 +391,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/24/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0724-E-LCM-Plus-GCD/" title="[25赛季暑期集训 0724] E - LCM Plus GCD">
-                        <span class="hidden-mobile">[25赛季暑期集训 0724] E - LCM Plus GCD</span>
+                      <a href="/2025/07/25/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-index/" title="[25赛季暑期集训 0725] index">
+                        <span class="hidden-mobile">[25赛季暑期集训 0725] index</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
