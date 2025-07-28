@@ -4,6 +4,120 @@
   
   
   <entry>
+    <title>[25赛季暑期集训 0728] G. Duizi and Shunzi</title>
+    <link href="/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-G-Duizi-and-Shunzi/"/>
+    <url>/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-G-Duizi-and-Shunzi/</url>
+    
+    <content type="html"><![CDATA[<h1>Statement</h1><p>给定每种花色的牌的数量，问最多可以出多少顺子和对子。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></p><h1>Tutorial</h1><p>首先，对子一定优于顺子，顺子一定只选三个的。</p><p>其次，考虑到样例中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>1 2 3 3 4 5</mtext></mrow><annotation encoding="application/x-tex">\text{1 2  3 3 4 5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord text"><span class="mord">1 2 3 3 4 5</span></span></span></span></span> 的情况，不能遇到两个的就选对子。在这种情况中，如果不管怎么样都优先选对子，那么就会有单个的牌被浪费。因此有策略：如果当前牌选完对子还有剩余，下一种花色的牌个数是奇数（即一定会剩下一张），下下一种花色的牌也存在，那么出一个顺子。</p><p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>728</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Greedy</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[25赛季暑期集训 0728] D. Covering </title>
+    <link href="/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-D-Covering/"/>
+    <url>/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-D-Covering/</url>
+    
+    <content type="html"><![CDATA[<h1>Statement</h1><p>给定一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">4 \times n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 的网格，用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 \times 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2 \times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的多米诺骨牌覆盖，问有几种覆盖方式。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>18</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n\leq 10^{18}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">18</span></span></span></span></span></span></span></span></span></span></span></span></p><h1>Tutorial</h1><p>通过小规模样例，试出来递推式之后用矩阵快速幂加速。</p><p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>16</mn><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(16\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">16</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>728</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[25赛季暑期集训 0728] index</title>
+    <link href="/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-index/"/>
+    <url>/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-index/</url>
+    
+    <content type="html"><![CDATA[<h1>赛时过题情况</h1><p>因为各种原因，缺席了这次集训。只打了20分钟可能。</p><p>赛时过题数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>728</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>快速幂</title>
+    <link href="/2025/07/27/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+    <url>/2025/07/27/%E5%BF%AB%E9%80%9F%E5%B9%82/</url>
+    
+    <content type="html"><![CDATA[<p>快速幂算法，时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>log</mi><mo>⁡</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(\log b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span></span></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">using</span> i64 = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br>  <br><span class="hljs-function">i64 <span class="hljs-title">qpow</span><span class="hljs-params">(i64 a, i64 b, i64 MOD)</span> </span>&#123;<br>  i64 ans = <span class="hljs-number">1</span>, base = a;<br>  <span class="hljs-keyword">while</span> (b) &#123;<br><span class="hljs-keyword">if</span> (b &amp; <span class="hljs-number">1</span>) &#123;<br>ans = (ans * base) % MOD;<br>    &#125;<br>    base = (base * base) % MOD;<br>    b &gt;&gt;= <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> ans;<br>&#125;<br></code></pre></td></tr></table></figure><p>矩阵快速幂算法，时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mi>log</mi><mo>⁡</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3\log b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span></span></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">using</span> i64 = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br>i64 MOD = <span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Matrix</span> &#123;<br>  <span class="hljs-type">int</span> n, m;<br>  std::vector&lt;std::vector&lt;i64&gt;&gt; A;<br>  <br>  <span class="hljs-built_in">Matrix</span>(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m) &#123;<br><span class="hljs-built_in">init</span>(n, m);<br>  &#125;<br>  <br>  <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> m)</span> </span>&#123;<br><span class="hljs-keyword">this</span>-&gt;n = n;<br>    <span class="hljs-keyword">this</span>-&gt;m = m;<br>    A.<span class="hljs-built_in">assign</span>(n, std::<span class="hljs-built_in">vector</span>&lt;i64&gt;(m, <span class="hljs-number">0</span>));<br>  &#125;<br>  <br>  <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Identity</span><span class="hljs-params">()</span> </span>&#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; m; j++) &#123;<br><span class="hljs-keyword">if</span> (i == j) &#123;<br>A[i][j] = <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> A[i][j] = <span class="hljs-number">0</span>;<br>      &#125;<br>    &#125;<br>  &#125;<br>  <br>  Matrix <span class="hljs-keyword">operator</span> * (<span class="hljs-type">const</span> Matrix&amp; X) <span class="hljs-type">const</span> &#123;<br>    <span class="hljs-function">Matrix <span class="hljs-title">tmp</span><span class="hljs-params">(n, X.m)</span></span>;<br>    <span class="hljs-comment">//该循环顺序下，常数较小</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; tmp.n; i++) &#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; m; k++) &#123;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; tmp.m; j++) &#123;<br>tmp.A[i][j] = (tmp.A[i][j] + A[i][k] * X.A[k][j] % MOD) % MOD;<br>        &#125;<br>      &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> tmp;<br>  &#125;<br>&#125;;<br><br><span class="hljs-function">Matrix <span class="hljs-title">qpow</span><span class="hljs-params">(Matrix a, i64 b)</span> </span>&#123;<br><span class="hljs-function">Matrix <span class="hljs-title">ans</span><span class="hljs-params">(a.n, a.m)</span>, base </span>= a;<br>  ans.<span class="hljs-built_in">Identity</span>();<br>  <span class="hljs-keyword">while</span> (b) &#123;<br><span class="hljs-keyword">if</span> (b &amp; <span class="hljs-number">1</span>) &#123;<br>      ans = ans * base;<br>    &#125;<br>    base = base * base;<br>    b &gt;&gt;= <span class="hljs-number">1</span>;<br>  &#125;<br>  <span class="hljs-keyword">return</span> ans;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>算法模板</category>
+      
+      <category>数学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[25赛季暑期集训 0725] 1003 光线折射</title>
     <link href="/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1003-%E5%85%89%E7%BA%BF%E6%8A%98%E5%B0%84/"/>
     <url>/2025/07/26/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0725-1003-%E5%85%89%E7%BA%BF%E6%8A%98%E5%B0%84/</url>
@@ -786,6 +900,8 @@
       
       <category>数学</category>
       
+      <category>博弈论</category>
+      
     </categories>
     
     
@@ -812,6 +928,8 @@
       <category>算法模板</category>
       
       <category>数学</category>
+      
+      <category>博弈论</category>
       
     </categories>
     
@@ -922,6 +1040,8 @@
       <category>算法模板</category>
       
       <category>图论</category>
+      
+      <category>连通性相关</category>
       
     </categories>
     
