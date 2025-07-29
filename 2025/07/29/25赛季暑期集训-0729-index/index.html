@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Statement 给定每种花色的牌的数量，问最多可以出多少顺子和对子。 1≤n≤1061 \leq n \leq 10^61≤n≤106 Tutorial 首先，对子一定优于顺子，顺子一定只选三个的。 其次，考虑到样例中 1 2 3 3 4 5\text{1 2  3 3 4 5}1 2 3 3 4 5 的情况，不能遇到两个的就选对子。在这种情况中，如果不管怎么样都优先选对子，那么就会有单个的牌">
+    <meta name="description" content="赛时过题情况 第二次倒数第一。 签到题就交了两发罚时，另一道签到题不会做，但是会做 J\text{J}J，然后调了一下午的代码。 赛时过题数：222">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[25赛季暑期集训 0728] G. Duizi and Shunzi">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-G-Duizi-and-Shunzi/index.html">
+<meta property="og:title" content="[25赛季暑期集训 0729] index">
+<meta property="og:url" content="https://feng5u.github.io/2025/07/29/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0729-index/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="Statement 给定每种花色的牌的数量，问最多可以出多少顺子和对子。 1≤n≤1061 \leq n \leq 10^61≤n≤106 Tutorial 首先，对子一定优于顺子，顺子一定只选三个的。 其次，考虑到样例中 1 2 3 3 4 5\text{1 2  3 3 4 5}1 2 3 3 4 5 的情况，不能遇到两个的就选对子。在这种情况中，如果不管怎么样都优先选对子，那么就会有单个的牌">
+<meta property="og:description" content="赛时过题情况 第二次倒数第一。 签到题就交了两发罚时，另一道签到题不会做，但是会做 J\text{J}J，然后调了一下午的代码。 赛时过题数：222">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-28T07:42:47.000Z">
-<meta property="article:modified_time" content="2025-07-28T07:48:53.160Z">
+<meta property="article:published_time" content="2025-07-29T12:00:29.000Z">
+<meta property="article:modified_time" content="2025-07-29T12:15:58.758Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="Greedy">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[25赛季暑期集训 0728] G. Duizi and Shunzi - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训 0729] index - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[25赛季暑期集训 0728] G. Duizi and Shunzi"></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训 0729] index"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-28 15:42" pubdate>
-          2025年7月28日 下午
+        <time datetime="2025-07-29 20:00" pubdate>
+          2025年7月29日 晚上
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          176 字
+          56 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -261,18 +261,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[25赛季暑期集训 0728] G. Duizi and Shunzi</h1>
+            <h1 id="seo-header">[25赛季暑期集训 0729] index</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>Statement</h1>
-<p>给定每种花色的牌的数量，问最多可以出多少顺子和对子。</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></p>
-<h1>Tutorial</h1>
-<p>首先，对子一定优于顺子，顺子一定只选三个的。</p>
-<p>其次，考虑到样例中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>1 2 3 3 4 5</mtext></mrow><annotation encoding="application/x-tex">\text{1 2  3 3 4 5}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord text"><span class="mord">1 2 3 3 4 5</span></span></span></span></span> 的情况，不能遇到两个的就选对子。在这种情况中，如果不管怎么样都优先选对子，那么就会有单个的牌被浪费。因此有策略：如果当前牌选完对子还有剩余，下一种花色的牌个数是奇数（即一定会剩下一张），下下一种花色的牌也存在，那么出一个顺子。</p>
-<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+                <h1>赛时过题情况</h1>
+<p>第二次倒数第一。</p>
+<p>签到题就交了两发罚时，另一道签到题不会做，但是会做 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>J</mtext></mrow><annotation encoding="application/x-tex">\text{J}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">J</span></span></span></span></span>，然后调了一下午的代码。</p>
+<p>赛时过题数：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span></p>
 
                 
               </div>
@@ -301,7 +298,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/728/" class="category-chain-item">728</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/729/" class="category-chain-item">729</a>
   
   
 
@@ -320,7 +317,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Greedy/" class="print-no-link">#Greedy</a>
+        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
       
     </div>
   
@@ -332,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[25赛季暑期集训 0728] G. Duizi and Shunzi</div>
-      <div>https://feng5u.github.io/2025/07/28/25赛季暑期集训-0728-G-Duizi-and-Shunzi/</div>
+      <div>[25赛季暑期集训 0729] index</div>
+      <div>https://feng5u.github.io/2025/07/29/25赛季暑期集训-0729-index/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +342,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月28日</div>
+          <div>2025年7月29日</div>
         </div>
       
       
@@ -377,9 +374,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/29/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0729-index/" title="[25赛季暑期集训 0729] index">
+                      <a href="/2025/07/29/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0729-J-Fastest-Coverage-Problem/" title="[25赛季暑期集训 0729] J - Fastest Coverage Problem">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[25赛季暑期集训 0729] index</span>
+                        <span class="hidden-mobile">[25赛季暑期集训 0729] J - Fastest Coverage Problem</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -387,8 +384,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-D-Covering/" title="[25赛季暑期集训 0728] D. Covering ">
-                        <span class="hidden-mobile">[25赛季暑期集训 0728] D. Covering </span>
+                      <a href="/2025/07/28/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0728-G-Duizi-and-Shunzi/" title="[25赛季暑期集训 0728] G. Duizi and Shunzi">
+                        <span class="hidden-mobile">[25赛季暑期集训 0728] G. Duizi and Shunzi</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
