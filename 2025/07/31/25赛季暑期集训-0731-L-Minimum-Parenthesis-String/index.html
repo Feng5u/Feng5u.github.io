@@ -19,13 +19,15 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="Statement 给定一个 nnn 和 mmm 个区间，要求构造一个长度为 2n2n2n 的合法括号序列，满足每一个区间中都有至少一个左括号，且字典序最小。 1≤n≤2×105,1≤m≤4×1051 \leq n \leq 2\times 10^5, 1 \leq m \leq 4\times 10^51≤n≤2×105,1≤m≤4×105 Tutorial 首先，利用贪心填入尽可能少的左括号，">
+<meta property="og:type" content="article">
 <meta property="og:title" content="[25赛季暑期集训 0731] L - Minimum Parenthesis String">
 <meta property="og:url" content="https://feng5u.github.io/2025/07/31/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0731-L-Minimum-Parenthesis-String/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
+<meta property="og:description" content="Statement 给定一个 nnn 和 mmm 个区间，要求构造一个长度为 2n2n2n 的合法括号序列，满足每一个区间中都有至少一个左括号，且字典序最小。 1≤n≤2×105,1≤m≤4×1051 \leq n \leq 2\times 10^5, 1 \leq m \leq 4\times 10^51≤n≤2×105,1≤m≤4×105 Tutorial 首先，利用贪心填入尽可能少的左括号，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-31T12:51:27.000Z">
-<meta property="article:modified_time" content="2025-08-02T04:27:21.715Z">
+<meta property="article:modified_time" content="2025-08-02T07:56:45.701Z">
 <meta property="article:author" content="Feng5u">
 <meta property="article:tag" content="Constructive Algorithms">
 <meta name="twitter:card" content="summary_large_image">
@@ -211,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          155 字
         
       </span>
     
@@ -222,7 +224,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -264,7 +266,13 @@
             
               <div class="markdown-body">
                 
-                
+                <h1>Statement</h1>
+<p>给定一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 个区间，要求构造一个长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span> 的合法括号序列，满足每一个区间中都有至少一个左括号，且字典序最小。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup><mo separator="true">,</mo><mn>1</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mn>4</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 2\times 10^5, 1 \leq m \leq 4\times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></p>
+<h1>Tutorial</h1>
+<p>首先，利用贪心填入尽可能少的左括号，使得每个区间中都有至少一个左括号，然后从左端开始填左括号，直到左括号的数量达到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">n/2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord">/2</span></span></span></span>，然后检查括号序列是否合法即可。</p>
+<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+
                 
               </div>
             
