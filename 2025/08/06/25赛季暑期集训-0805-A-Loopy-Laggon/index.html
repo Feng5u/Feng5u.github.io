@@ -19,23 +19,21 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Statement 给定一个数字 nnn，描述一棵有 2n2n2n 个节点的树，其中，每个节点有一个钥匙或是一把锁，分别从 111 到 nnn 编号，锁和钥匙一一对应，且每个编号的钥匙和锁都出现且仅出现一次。对于树上每一个节点，输出从该点出发是否可以拿到所有的钥匙。 1≤n≤2×1051 \leq n \leq 2 \times 10^51≤n≤2×105 Tutorial 对于一把锁，它将整棵树">
+    <meta name="description" content="Statement 给定 100100100 组矩阵，每组 101010 个，矩阵的大小都是 10×1010 \times 1010×10，首先进行 10610^6106 次旋转操作，每次旋转操作作用于某个矩阵内的 4×44 \times 44×4 的矩阵，然后再对其中 505050 组矩阵随机打乱，问哪几组矩阵是被随机打乱的，要求正确率不低于 90%90\%90% Tutorial 由于对矩阵进">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[25赛季暑期集训 0804] 1005 钥匙迷宫">
-<meta property="og:url" content="https://feng5u.github.io/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0804-1005-%E9%92%A5%E5%8C%99%E8%BF%B7%E5%AE%AB/index.html">
+<meta property="og:title" content="[25赛季暑期集训 0805] A - Loopy Laggon">
+<meta property="og:url" content="https://feng5u.github.io/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-A-Loopy-Laggon/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="Statement 给定一个数字 nnn，描述一棵有 2n2n2n 个节点的树，其中，每个节点有一个钥匙或是一把锁，分别从 111 到 nnn 编号，锁和钥匙一一对应，且每个编号的钥匙和锁都出现且仅出现一次。对于树上每一个节点，输出从该点出发是否可以拿到所有的钥匙。 1≤n≤2×1051 \leq n \leq 2 \times 10^51≤n≤2×105 Tutorial 对于一把锁，它将整棵树">
+<meta property="og:description" content="Statement 给定 100100100 组矩阵，每组 101010 个，矩阵的大小都是 10×1010 \times 1010×10，首先进行 10610^6106 次旋转操作，每次旋转操作作用于某个矩阵内的 4×44 \times 44×4 的矩阵，然后再对其中 505050 组矩阵随机打乱，问哪几组矩阵是被随机打乱的，要求正确率不低于 90%90\%90% Tutorial 由于对矩阵进">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-06T07:15:13.000Z">
-<meta property="article:modified_time" content="2025-08-06T07:22:19.657Z">
+<meta property="article:published_time" content="2025-08-06T08:21:06.000Z">
+<meta property="article:modified_time" content="2025-08-06T08:25:58.428Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="Tree">
-<meta property="article:tag" content="ST">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[25赛季暑期集训 0804] 1005 钥匙迷宫 - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训 0805] A - Loopy Laggon - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -191,7 +189,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[25赛季暑期集训 0804] 1005 钥匙迷宫"></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训 0805] A - Loopy Laggon"></span>
           
         </div>
 
@@ -202,7 +200,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-06 15:15" pubdate>
+        <time datetime="2025-08-06 16:21" pubdate>
           2025年8月6日 下午
         </time>
       </span>
@@ -214,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          374 字
+          176 字
         
       </span>
     
@@ -225,7 +223,7 @@
         
         
         
-          4 分钟
+          2 分钟
         
       </span>
     
@@ -262,18 +260,16 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[25赛季暑期集训 0804] 1005 钥匙迷宫</h1>
+            <h1 id="seo-header">[25赛季暑期集训 0805] A - Loopy Laggon</h1>
             
             
               <div class="markdown-body">
                 
                 <h1>Statement</h1>
-<p>给定一个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>，描述一棵有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span> 个节点的树，其中，每个节点有一个钥匙或是一把锁，分别从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 编号，锁和钥匙一一对应，且每个编号的钥匙和锁都出现且仅出现一次。对于树上每一个节点，输出从该点出发是否可以拿到所有的钥匙。</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 2 \times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></p>
+<p>给定 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn></mrow><annotation encoding="application/x-tex">100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span> 组矩阵，每组 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span> 个，矩阵的大小都是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>×</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">10 \times 10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span>，首先进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span> 次旋转操作，每次旋转操作作用于某个矩阵内的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">4 \times 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 的矩阵，然后再对其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn></mrow><annotation encoding="application/x-tex">50</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span> 组矩阵随机打乱，问哪几组矩阵是被随机打乱的，要求正确率不低于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>90</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">90\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">90%</span></span></span></span></p>
 <h1>Tutorial</h1>
-<p>对于一把锁，它将整棵树划分为几个不同的连通块，显然，对应它的钥匙只会在其中一个连通块中出现，从其他连通块中的任意节点一定都无法经过这把锁，也就无法拿到所有的钥匙。也就是说，树上有且只有一个联通块是合法的（这里的连通块指的是只有钥匙的连通块）。</p>
-<p>那么，不妨假定一个根节点，对于每一个锁，维护其子树中钥匙的情况，借此找出唯一可能合法的连通块。在这个过程中，只要找到一个合法的连通块就可以直接退出，但是由于可能有多个锁相邻，而我们显然应该从有钥匙的节点出发，因此通过倍增维护最近的钥匙节点。最后，从该连通块内通过倍增维护到的钥匙节点出发，验证该连通块是否可行即可。</p>
-<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<p>由于对矩阵进行旋转相当于做了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 个长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 的环置换，因此不会改变逆序对个数的奇偶性，因此只需要判断每个矩阵展开成一个序列的逆序对的奇偶性即可。</p>
+<p>具体时间复杂度与计数逆序对的方法有关。</p>
 
                 
               </div>
@@ -302,7 +298,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/804/" class="category-chain-item">804</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/805/" class="category-chain-item">805</a>
   
   
 
@@ -318,15 +314,6 @@
     </div>
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Tree/" class="print-no-link">#Tree</a>
-      
-        <a href="/tags/ST/" class="print-no-link">#ST</a>
-      
-    </div>
-  
 </div>
 
 
@@ -335,8 +322,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[25赛季暑期集训 0804] 1005 钥匙迷宫</div>
-      <div>https://feng5u.github.io/2025/08/06/25赛季暑期集训-0804-1005-钥匙迷宫/</div>
+      <div>[25赛季暑期集训 0805] A - Loopy Laggon</div>
+      <div>https://feng5u.github.io/2025/08/06/25赛季暑期集训-0805-A-Loopy-Laggon/</div>
     </div>
     <div class="license-meta">
       
@@ -380,9 +367,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-G-Nice-Doppelgnger/" title="[25赛季暑期集训 0805] G - Nice Doppelgnger">
+                      <a href="/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-D-Lost-Woods/" title="[25赛季暑期集训 0805] D - Lost Woods">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[25赛季暑期集训 0805] G - Nice Doppelgnger</span>
+                        <span class="hidden-mobile">[25赛季暑期集训 0805] D - Lost Woods</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +377,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/05/2025-08-04-%E8%87%B3-2025-08-10/" title="2025.08.04 至 2025.08.10">
-                        <span class="hidden-mobile">2025.08.04 至 2025.08.10</span>
+                      <a href="/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-J-Ivory/" title="[25赛季暑期集训 0805] J - Ivory">
+                        <span class="hidden-mobile">[25赛季暑期集训 0805] J - Ivory</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
