@@ -4,6 +4,124 @@
   
   
   <entry>
+    <title>[25赛季暑期集训 0807] G - Changing Minimum Spanning Tree</title>
+    <link href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-G-Changing-Minimum-Spanning-Tree/"/>
+    <url>/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-G-Changing-Minimum-Spanning-Tree/</url>
+    
+    <content type="html"><![CDATA[<h1>Statement</h1><p>给定一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个点 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 条边的无向简单图，再加入一条权值在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 之间的边，使得新的图是一个有最小生成树的简单图，且所有的最小生成树都一定包含新边。统计方案数。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>5</mn></msup><mo separator="true">,</mo><mn>0</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup><mo separator="true">,</mo><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^5, 0 \leq m \leq 2 \times 10^5, 1 \leq k\leq 10^9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0085em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span></p><h1>Tutorial</h1><p>当原图中没有生成树时，原图必须形成两个连通块，可以加一条任意权值的边令两个连通块连通即可；</p><p>如果有生成树，很显然，如果有一棵新的最小生成树包含了新的边，且这棵生成树的权值和比之前的更小，就一定符合题意。</p><p>按照 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>kruskal</mtext></mrow><annotation encoding="application/x-tex">\text{kruskal}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">kruskal</span></span></span></span></span> 算法的过程，我们只需要在插入某个边时，新增一条比这条边权值更小的边，连接两个连通块即可。但是由于新图需要是一个简单图，即不能有重边，因此还需要维护有哪些边不可以新加。可以采用并查集，并通过启发式合并降低时间复杂度。</p><p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>807</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MST</tag>
+      
+      <tag>DSU</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[25赛季暑期集训 0807] J - Multiplication in Base the Square Root of -2</title>
+    <link href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-J-Multiplication-in-Base-the-Square-Root-of-2/"/>
+    <url>/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-J-Multiplication-in-Base-the-Square-Root-of-2/</url>
+    
+    <content type="html"><![CDATA[<h1>Statement</h1><p>给定两个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mo>−</mo><mn>2</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1744em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8656em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">−</span><span class="mord">2</span></span></span><span style="top:-2.8256em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,-221l0 -0c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47zM834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1744em;"><span></span></span></span></span></span></span></span></span> 进制下的数字（用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 串表示），计算其乘积。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi mathvariant="normal">∣</mi><mi>A</mi><mi mathvariant="normal">∣</mi><mo>+</mo><mi mathvariant="normal">∣</mi><mi>B</mi><mi mathvariant="normal">∣</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq |A| +|B| \leq 2 \times 10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span></p><h1>Tutorial</h1><p>将两个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 串视为多项式，进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>FFT</mtext></mrow><annotation encoding="application/x-tex">\text{FFT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">FFT</span></span></span></span></span> 并进行进位即可。</p><p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n \log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>807</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>FFT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[25赛季暑期集训 0807] B - Inversion Number Parity</title>
+    <link href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-B-Inversion-Number-Parity/"/>
+    <url>/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-B-Inversion-Number-Parity/</url>
+    
+    <content type="html"><![CDATA[<h1>Statement</h1><p>给定随机数生成器参数，基于交换生成一个 0 到 (n − 1) 的随机排列，并生成 (n − 1) 次区间循环左移的修改，问修改前后每次排列的逆序对奇偶性。</p><p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>7</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span></span></span></span></span></span></span></span></p><h1>Tutorial</h1><p>首先考虑区间左移的操作对逆序对的奇偶性有什么影响。区间左移等价于将区间分为两半，两个区间内部的逆序对数不会发生改变。考虑前一个区间中的某个数字，假设它与后一个区间形成了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对，后一个区间一共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个数字，那么当这个数字移动到后一个区间后面时，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对消失了，产生了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">n-k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对，因此逆序对数改变了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">n-2k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 次，显然，这与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">2k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 没什么关系，仅与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 有关。</p><p>下面考虑生成数据的过程。由于数据生成器是一个仅与前三项有关的递推式，因此可以使用轮换数组，唯一的难点在于利用交换构造排列。由于空间限制，无法存储排列，但是由于排列是通过交换生成的，可以利用线性代数中的结论，直接得到逆序对个数的奇偶性。</p><p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛题解</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>807</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Math</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>[25赛季暑期集训 0807] index</title>
+    <link href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-index/"/>
+    <url>/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-index/</url>
+    
+    <content type="html"><![CDATA[<h1>赛时过题情况</h1><p>整体表现不错。</p><p>队友刚开没多久就想出了 A 题，我就把位置让给他了。从后往前开的题，看起来没什么可做的，就顺着队友开的题从前往后看，于是发现了 C 题大水题，等队友过了 A 立马去写 C 了，结果没开 long long  交了一发罚时。过掉之后和队友讨论 J，发现可以用 FFT，交给队友去抄板子了，剩下两个人继续讨论 G 和 F。讨论了半天无果，于是重新跟榜，发现 B 题过得最多，也是非常顺利地讨论了出来，交给队友实现了。换下来的队友开始和我口胡 F 和 G 的算法，等 B 题过掉之后，三个人开始集思广益 F，最后想着先写个暴力跑跑看看，意外地跑得很快，于是开始想各种奇技淫巧卡常，最后硬生生用暴力做法过掉了 F。但是最后也没有过掉 G，非常遗憾。</p><p>赛时过题数：5</p><h1>赛后补题情况</h1><p>补了 G，整体思路和第一版以及第三版（这两版其实一样）很接近，但是由于所有人都没想到启发式合并，失之交臂。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛记录</category>
+      
+      <category>25赛季暑期集训</category>
+      
+      <category>807</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[25赛季暑期集训 0805] D - Lost Woods</title>
     <link href="/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-D-Lost-Woods/"/>
     <url>/2025/08/06/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0805-D-Lost-Woods/</url>
@@ -151,7 +269,7 @@
     <link href="/2025/08/05/2025-08-04-%E8%87%B3-2025-08-10/"/>
     <url>/2025/08/05/2025-08-04-%E8%87%B3-2025-08-10/</url>
     
-    <content type="html"><![CDATA[<h1>日期：2025.08.04</h1><p>白天起的太晚了，没有训练。</p><hr><p>晚上学了快速傅里叶变换，整理了相关笔记以及模板，做了板子题。</p><h1>日期：2025.08.05</h1><p><a href="https://codeforces.com/problemset/problem/2109/D">2109D - D/D/D</a></p><p><strong>自己想到的：基本上想到了</strong>。由于边都是无向边，因此可以在两个节点之间来回走，使得一条路径的长度反复加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>。因此，我们只需要关注一条路径的奇偶性，同时，这条路经的长度应当尽可能的小，这样才有加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的余地，同时，选出来的数字应当尽可能的大。因此，需要维护到某个点长度为奇数的最短路和长度为偶数的最短路。而选出来的数字的和的最大值就是所有数字的和，为了改变其奇偶性，减去最小的奇数项，就得到了最大的奇数和以及最大的偶数和。</p><p>**没有想到的：**如何求解不同奇偶性的最短路。可以利用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>dijkstra</mtext></mrow><annotation encoding="application/x-tex">\text{dijkstra}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">dijkstra</span></span></span></span></span> 的思想，实质上是进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>DP</mtext></mrow><annotation encoding="application/x-tex">\text{DP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">DP</span></span></span></span></span> 或者说广搜。</p><hr><p>晚上学习了快速数论变换，整理了相关笔记及模板，做了板子题。</p>]]></content>
+    <content type="html"><![CDATA[<h1>日期：2025.08.04</h1><p>白天起的太晚了，没有训练。</p><hr><p>晚上学了快速傅里叶变换，整理了相关笔记以及模板，做了板子题。</p><h1>日期：2025.08.05</h1><p><a href="https://codeforces.com/problemset/problem/2109/D">2109D - D/D/D</a></p><p><strong>自己想到的：基本上想到了</strong>。由于边都是无向边，因此可以在两个节点之间来回走，使得一条路径的长度反复加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>。因此，我们只需要关注一条路径的奇偶性，同时，这条路经的长度应当尽可能的小，这样才有加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的余地，同时，选出来的数字应当尽可能的大。因此，需要维护到某个点长度为奇数的最短路和长度为偶数的最短路。而选出来的数字的和的最大值就是所有数字的和，为了改变其奇偶性，减去最小的奇数项，就得到了最大的奇数和以及最大的偶数和。</p><p>**没有想到的：**如何求解不同奇偶性的最短路。可以利用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>dijkstra</mtext></mrow><annotation encoding="application/x-tex">\text{dijkstra}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">dijkstra</span></span></span></span></span> 的思想，实质上是进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>DP</mtext></mrow><annotation encoding="application/x-tex">\text{DP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">DP</span></span></span></span></span> 或者说广搜。</p><hr><p>晚上学习了快速数论变换，整理了相关笔记及模板，做了板子题。</p><h1>日期：2025.08.06</h1><p>整理了周一周二集训的题目，进行了补题。</p><h1>日期：2025.08.07</h1><p><a href="https://codeforces.com/problemset/problem/2126/G1">2126G1 - Big Wins! (easy version)</a></p><p>**自己想到的：**由于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的范围很小，因此可以尝试枚举答案并验证。</p><p>**没有想到的：**其实，在验证的过程中并不需要要求正好取到枚举的答案。更确切地说，按照题解中的思路，当我们枚举中位数时，由于中位数肯定越大越好，因此我们当前枚举的可以看作是当前规定的中位数的最小值。同时，在匹配相应的最小值时，我们也不需要真的验证其是否是最小值，只需要依次验证所有数字是否可能合法（此处的合法指的是是否使得中位数的下界被保证）。这样，由于我们遍历了所有情况，因此最优解一定会被更新。</p><hr><p>晚上补了下午的题/</p>]]></content>
     
     
     <categories>
@@ -2098,7 +2216,7 @@
     <link href="/2025/07/13/%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/"/>
     <url>/2025/07/13/%E8%AE%AD%E7%BB%83%E8%AE%B0%E5%BD%95/</url>
     
-    <content type="html"><![CDATA[<ol><li>学习基本算法（<a href="https://www.cnblogs.com/WIDA/p/17633758.html">参考网站</a>），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录；</li><li>板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。</li></ol><p>待补充算法：快速数论变换、快速沃尔什变换、后缀数组、后缀自动机、KMP、AC自动机。</p>]]></content>
+    <content type="html"><![CDATA[<ol><li>学习基本算法（<a href="https://www.cnblogs.com/WIDA/p/17633758.html">参考网站</a>），每一个算法都进行专题练习（在 Vjudge 上搜索题单练习）并做好记录；</li><li>板刷 Codeforces 上 1900~2300 的题目，其中涉及的没有学习的算法也一并补充。</li></ol><p>待补充算法：快速沃尔什变换、后缀数组、后缀自动机、KMP、AC自动机、莫队算法、树套树、启发式合并、可持久化数据结构。</p>]]></content>
     
     
     <categories>
@@ -2285,31 +2403,6 @@
       <tag>Constructive Algorithms</tag>
       
       <tag>Greedy</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>开发日志 - 计</title>
-    <link href="/2025/07/07/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-%E8%AE%A1/"/>
-    <url>/2025/07/07/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-%E8%AE%A1/</url>
-    
-    <content type="html"><![CDATA[<p><strong>日期：</strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.07.07</mn></mrow><annotation encoding="application/x-tex">2025.07.07</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.07.07</span></span></span></span></p><p>今天是“计”这个想法诞生的第一天，主要是希望给自己做一款自己用的惯的计划类软件，“计”这个名字也是因为懒得想了所以直接取了一个单字，不过为了稍微有点说法，所以其实是用了文言文的说法。</p><p>目前打算实现以下板块：</p><ul><li>以目标为导向的计划清单；</li><li>某个时间跨度下的计划清单（日历视图）；</li></ul><p>其中，更细致的功能如下：</p><ul><li>显示计划的优先级；</li><li>可以设置重复任务；</li><li>日历视图里，点开单日、单周时可以显示详细的 24 小时安排，否则计划的日历显示默认按照字典序排序；</li><li>单个任务的编辑可以调整优先级和持续时间；</li><li>可以在日历视图生成一个模板导出与导入（仅限本地）；</li></ul>]]></content>
-    
-    
-    <categories>
-      
-      <category>开发日志</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>记录</tag>
       
     </tags>
     

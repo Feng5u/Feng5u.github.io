@@ -27,7 +27,7 @@
 <meta property="og:description" content="日期：2025.08.04 白天起的太晚了，没有训练。  晚上学了快速傅里叶变换，整理了相关笔记以及模板，做了板子题。 日期：2025.08.05 2109D - D&#x2F;D&#x2F;D 自己想到的：基本上想到了。由于边都是无向边，因此可以在两个节点之间来回走，使得一条路径的长度反复加 222。因此，我们只需要关注一条路径的奇偶性，同时，这条路经的长度应当尽可能的小，这样才有加 222 的余地，同时，选出来的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-05T02:26:42.000Z">
-<meta property="article:modified_time" content="2025-08-05T15:38:43.780Z">
+<meta property="article:modified_time" content="2025-08-07T14:30:41.227Z">
 <meta property="article:author" content="Feng5u">
 <meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          308 字
+          550 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -276,6 +276,14 @@
 <p>**没有想到的：**如何求解不同奇偶性的最短路。可以利用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>dijkstra</mtext></mrow><annotation encoding="application/x-tex">\text{dijkstra}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">dijkstra</span></span></span></span></span> 的思想，实质上是进行 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>DP</mtext></mrow><annotation encoding="application/x-tex">\text{DP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">DP</span></span></span></span></span> 或者说广搜。</p>
 <hr>
 <p>晚上学习了快速数论变换，整理了相关笔记及模板，做了板子题。</p>
+<h1>日期：2025.08.06</h1>
+<p>整理了周一周二集训的题目，进行了补题。</p>
+<h1>日期：2025.08.07</h1>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2126/G1">2126G1 - Big Wins! (easy version)</a></p>
+<p>**自己想到的：**由于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的范围很小，因此可以尝试枚举答案并验证。</p>
+<p>**没有想到的：**其实，在验证的过程中并不需要要求正好取到枚举的答案。更确切地说，按照题解中的思路，当我们枚举中位数时，由于中位数肯定越大越好，因此我们当前枚举的可以看作是当前规定的中位数的最小值。同时，在匹配相应的最小值时，我们也不需要真的验证其是否是最小值，只需要依次验证所有数字是否可能合法（此处的合法指的是是否使得中位数的下界被保证）。这样，由于我们遍历了所有情况，因此最优解一定会被更新。</p>
+<hr>
+<p>晚上补了下午的题/</p>
 
                 
               </div>

@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="日期：2025.07.072025.07.072025.07.07 今天是“计”这个想法诞生的第一天，主要是希望给自己做一款自己用的惯的计划类软件，“计”这个名字也是因为懒得想了所以直接取了一个单字，不过为了稍微有点说法，所以其实是用了文言文的说法。 目前打算实现以下板块：  以目标为导向的计划清单； 某个时间跨度下的计划清单（日历视图）；  其中，更细致的功能如下：  显示计划的优先级； 可以设">
+    <meta name="description" content="Statement 给定随机数生成器参数，基于交换生成一个 0 到 (n − 1) 的随机排列，并生成 (n − 1) 次区间循环左移的修改，问修改前后每次排列的逆序对奇偶性。 1≤n≤1071 \leq n \leq 10^71≤n≤107 Tutorial 首先考虑区间左移的操作对逆序对的奇偶性有什么影响。区间左移等价于将区间分为两半，两个区间内部的逆序对数不会发生改变。考虑前一个区间中的某个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发日志 - 计">
-<meta property="og:url" content="https://feng5u.github.io/2025/07/07/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-%E8%AE%A1/index.html">
+<meta property="og:title" content="[25赛季暑期集训 0807] B - Inversion Number Parity">
+<meta property="og:url" content="https://feng5u.github.io/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-B-Inversion-Number-Parity/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="日期：2025.07.072025.07.072025.07.07 今天是“计”这个想法诞生的第一天，主要是希望给自己做一款自己用的惯的计划类软件，“计”这个名字也是因为懒得想了所以直接取了一个单字，不过为了稍微有点说法，所以其实是用了文言文的说法。 目前打算实现以下板块：  以目标为导向的计划清单； 某个时间跨度下的计划清单（日历视图）；  其中，更细致的功能如下：  显示计划的优先级； 可以设">
+<meta property="og:description" content="Statement 给定随机数生成器参数，基于交换生成一个 0 到 (n − 1) 的随机排列，并生成 (n − 1) 次区间循环左移的修改，问修改前后每次排列的逆序对奇偶性。 1≤n≤1071 \leq n \leq 10^71≤n≤107 Tutorial 首先考虑区间左移的操作对逆序对的奇偶性有什么影响。区间左移等价于将区间分为两半，两个区间内部的逆序对数不会发生改变。考虑前一个区间中的某个">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-07T12:42:41.000Z">
-<meta property="article:modified_time" content="2025-07-07T13:41:55.303Z">
+<meta property="article:published_time" content="2025-08-07T11:08:24.000Z">
+<meta property="article:modified_time" content="2025-08-07T12:39:18.868Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Math">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>开发日志 - 计 - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训 0807] B - Inversion Number Parity - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="开发日志 - 计"></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训 0807] B - Inversion Number Parity"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-07 20:42" pubdate>
-          2025年7月7日 晚上
+        <time datetime="2025-08-07 19:08" pubdate>
+          2025年8月7日 晚上
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          237 字
+          350 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -261,26 +261,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">开发日志 - 计</h1>
+            <h1 id="seo-header">[25赛季暑期集训 0807] B - Inversion Number Parity</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>日期：</strong><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2025.07.07</mn></mrow><annotation encoding="application/x-tex">2025.07.07</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2025.07.07</span></span></span></span></p>
-<p>今天是“计”这个想法诞生的第一天，主要是希望给自己做一款自己用的惯的计划类软件，“计”这个名字也是因为懒得想了所以直接取了一个单字，不过为了稍微有点说法，所以其实是用了文言文的说法。</p>
-<p>目前打算实现以下板块：</p>
-<ul>
-<li>以目标为导向的计划清单；</li>
-<li>某个时间跨度下的计划清单（日历视图）；</li>
-</ul>
-<p>其中，更细致的功能如下：</p>
-<ul>
-<li>显示计划的优先级；</li>
-<li>可以设置重复任务；</li>
-<li>日历视图里，点开单日、单周时可以显示详细的 24 小时安排，否则计划的日历显示默认按照字典序排序；</li>
-<li>单个任务的编辑可以调整优先级和持续时间；</li>
-<li>可以在日历视图生成一个模板导出与导入（仅限本地）；</li>
-</ul>
+                <h1>Statement</h1>
+<p>给定随机数生成器参数，基于交换生成一个 0 到 (n − 1) 的随机排列，并生成 (n − 1) 次区间循环左移的修改，问修改前后每次排列的逆序对奇偶性。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><msup><mn>10</mn><mn>7</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq n \leq 10^7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">7</span></span></span></span></span></span></span></span></span></span></span></p>
+<h1>Tutorial</h1>
+<p>首先考虑区间左移的操作对逆序对的奇偶性有什么影响。区间左移等价于将区间分为两半，两个区间内部的逆序对数不会发生改变。考虑前一个区间中的某个数字，假设它与后一个区间形成了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对，后一个区间一共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个数字，那么当这个数字移动到后一个区间后面时，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对消失了，产生了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">n-k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个逆序对，因此逆序对数改变了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">n-2k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 次，显然，这与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">2k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 没什么关系，仅与 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 有关。</p>
+<p>下面考虑生成数据的过程。由于数据生成器是一个仅与前三项有关的递推式，因此可以使用轮换数组，唯一的难点在于利用交换构造排列。由于空间限制，无法存储排列，但是由于排列是通过交换生成的，可以利用线性代数中的结论，直接得到逆序对个数的奇偶性。</p>
+<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
 
                 
               </div>
@@ -299,8 +291,22 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" class="category-chain-item">开发日志</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/" class="category-chain-item">比赛题解</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/" class="category-chain-item">25赛季暑期集训</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/807/" class="category-chain-item">807</a>
+  
+  
+
+  
+
   
 
       </span>
@@ -314,7 +320,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+        <a href="/tags/Math/" class="print-no-link">#Math</a>
       
     </div>
   
@@ -326,8 +332,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>开发日志 - 计</div>
-      <div>https://feng5u.github.io/2025/07/07/开发日志-计/</div>
+      <div>[25赛季暑期集训 0807] B - Inversion Number Parity</div>
+      <div>https://feng5u.github.io/2025/08/07/25赛季暑期集训-0807-B-Inversion-Number-Parity/</div>
     </div>
     <div class="license-meta">
       
@@ -339,7 +345,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年7月7日</div>
+          <div>2025年8月7日</div>
         </div>
       
       
@@ -371,9 +377,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/10/CCPC-2025-Shanghai-M-%E9%AD%94%E6%B3%95%E4%BD%BF%E8%80%83%E6%A0%B8/" title="[CCPC 2025 Shanghai] M. 魔法使考核">
+                      <a href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-J-Multiplication-in-Base-the-Square-Root-of-2/" title="[25赛季暑期集训 0807] J - Multiplication in Base the Square Root of -2">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[CCPC 2025 Shanghai] M. 魔法使考核</span>
+                        <span class="hidden-mobile">[25赛季暑期集训 0807] J - Multiplication in Base the Square Root of -2</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -381,8 +387,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/03/CCPC-2025-Shanghai-index/" title="[CCPC 2025 Shanghai] index">
-                        <span class="hidden-mobile">[CCPC 2025 Shanghai] index</span>
+                      <a href="/2025/08/07/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0807-index/" title="[25赛季暑期集训 0807] index">
+                        <span class="hidden-mobile">[25赛季暑期集训 0807] index</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
