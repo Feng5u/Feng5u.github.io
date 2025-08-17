@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Statement 定义一个 010101 字符串是平衡的当且仅当对于任意长度下任意的循环子串，111 的个数之差不超过 111。其中，循环子串是指，将原字符串视作一个环后，从中截出的长度为 lll 的连续子淳。 现有一个 010101 字符串，其中一些位置未知，要用 000 和 111 补充，问平衡字符串的数量。 Tutorial 首先，当一个平衡字符串中有 kkk 个 111 时，这 kkk">
+    <meta name="description" content="其实集训明天才结束，不过已经不是积分赛了，所以今天宣布完结也可以。 这次集训的收获真的很多：认识了更多朋友、学到了新的知识，也开拓了眼界。这些经历至少让我不后悔加入复旦大学 ACM\text{ACM}ACM 队这个组织，也让我不后悔以这种方式度过这个夏天。 但是事情并没有这么圆满。 下午教练组打电话给队长，说这个赛季已经没有我们的名额了，所以我们的 2025 赛季还没开始就已经结束了。难过肯定是有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[25赛季暑期集训 0816] B - Balanced Binary String ">
-<meta property="og:url" content="https://feng5u.github.io/2025/08/17/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0816-B-Balanced-Binary-String/index.html">
+<meta property="og:title" content="[25赛季暑期集训] index">
+<meta property="og:url" content="https://feng5u.github.io/2025/08/17/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-index/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="Statement 定义一个 010101 字符串是平衡的当且仅当对于任意长度下任意的循环子串，111 的个数之差不超过 111。其中，循环子串是指，将原字符串视作一个环后，从中截出的长度为 lll 的连续子淳。 现有一个 010101 字符串，其中一些位置未知，要用 000 和 111 补充，问平衡字符串的数量。 Tutorial 首先，当一个平衡字符串中有 kkk 个 111 时，这 kkk">
+<meta property="og:description" content="其实集训明天才结束，不过已经不是积分赛了，所以今天宣布完结也可以。 这次集训的收获真的很多：认识了更多朋友、学到了新的知识，也开拓了眼界。这些经历至少让我不后悔加入复旦大学 ACM\text{ACM}ACM 队这个组织，也让我不后悔以这种方式度过这个夏天。 但是事情并没有这么圆满。 下午教练组打电话给队长，说这个赛季已经没有我们的名额了，所以我们的 2025 赛季还没开始就已经结束了。难过肯定是有">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-08-17T10:16:39.000Z">
-<meta property="article:modified_time" content="2025-08-17T11:16:51.250Z">
+<meta property="article:published_time" content="2025-08-17T12:34:12.000Z">
+<meta property="article:modified_time" content="2025-08-17T12:46:36.224Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="Counting">
+<meta property="article:tag" content="记录">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[25赛季暑期集训 0816] B - Balanced Binary String  - Feng5u&#39;s blog</title>
+  <title>[25赛季暑期集训] index - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[25赛季暑期集训 0816] B - Balanced Binary String "></span>
+            <span id="subtitle" data-typed-text="[25赛季暑期集训] index"></span>
           
         </div>
 
@@ -201,7 +201,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-17 18:16" pubdate>
+        <time datetime="2025-08-17 20:34" pubdate>
           2025年8月17日 晚上
         </time>
       </span>
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          225 字
+          374 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -261,17 +261,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[25赛季暑期集训 0816] B - Balanced Binary String </h1>
+            <h1 id="seo-header">[25赛季暑期集训] index</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>Statement</h1>
-<p>定义一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 字符串是<strong>平衡</strong>的当且仅当对于任意长度下任意的循环子串，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的个数之差不超过 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。其中，循环子串是指，将原字符串视作一个环后，从中截出的长度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 的连续子淳。</p>
-<p>现有一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>01</mn></mrow><annotation encoding="application/x-tex">01</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">01</span></span></span></span> 字符串，其中一些位置未知，要用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 补充，问平衡字符串的数量。</p>
-<h1>Tutorial</h1>
-<p>首先，当一个平衡字符串中有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 时，这 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span> 个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的相对位置一定是固定的。将一个平衡字符串分成若干块，每一块都以 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 开始，其余数字全是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，每一个块的长度记为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，则有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><msub><mi>a</mi><mi>i</mi></msub><mo>−</mo><msub><mi>a</mi><mi>j</mi></msub><mi mathvariant="normal">∣</mi><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|a_i - a_j| \leq 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。于是每一个快的大小也被确定了，遍历 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>，用一些技巧进行计数即可。</p>
-<p>时间复杂度：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mi mathvariant="normal">/</mi><mn>32</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3/32)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mord">/32</span><span class="mclose">)</span></span></span></span></p>
+                <p>其实集训明天才结束，不过已经不是积分赛了，所以今天宣布完结也可以。</p>
+<p>这次集训的收获真的很多：认识了更多朋友、学到了新的知识，也开拓了眼界。这些经历至少让我不后悔加入复旦大学 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>ACM</mtext></mrow><annotation encoding="application/x-tex">\text{ACM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">ACM</span></span></span></span></span> 队这个组织，也让我不后悔以这种方式度过这个夏天。</p>
+<p>但是事情并没有这么圆满。</p>
+<p>下午教练组打电话给队长，说这个赛季已经没有我们的名额了，所以我们的 2025 赛季还没开始就已经结束了。难过肯定是有的，而且不知道和谁说，也不知道怎么去说。早早地结束了暑假，在东平和上海来回奔波，自己一个人在宿舍里住了一个月，并且在一个月中反复打碎再重塑自信心，忍受没有一个人在身边的孤独，最后却是竹篮打水一场空，心里肯定不好受，但是确实是因为自己实力不济，所以没有什么好抱怨的。</p>
+<p>虽然私心上不想让我的竞赛经历就这样草草地结束，但对于明年的情况我也乐观不起来，只好继续训练，不知道可以走到哪一步。</p>
+<p>这篇博客一定不是我竞赛的句号，在写下那篇真正的句号之前，我希望不要辜负了自己。</p>
 
                 
               </div>
@@ -298,13 +298,6 @@
   <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/" class="category-chain-item">25赛季暑期集训</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD/816/" class="category-chain-item">816</a>
-  
-  
-
-  
 
   
 
@@ -319,7 +312,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Counting/" class="print-no-link">#Counting</a>
+        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
       
     </div>
   
@@ -331,8 +324,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[25赛季暑期集训 0816] B - Balanced Binary String </div>
-      <div>https://feng5u.github.io/2025/08/17/25赛季暑期集训-0816-B-Balanced-Binary-String/</div>
+      <div>[25赛季暑期集训] index</div>
+      <div>https://feng5u.github.io/2025/08/17/25赛季暑期集训-index/</div>
     </div>
     <div class="license-meta">
       
@@ -376,18 +369,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/17/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-index/" title="[25赛季暑期集训] index">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[25赛季暑期集训] index</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/17/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0816-G-Back-and-Forth/" title="[25赛季暑期集训 0816] G - Back and Forth ">
-                        <span class="hidden-mobile">[25赛季暑期集训 0816] G - Back and Forth </span>
+                      <a href="/2025/08/17/25%E8%B5%9B%E5%AD%A3%E6%9A%91%E6%9C%9F%E9%9B%86%E8%AE%AD-0816-B-Balanced-Binary-String/" title="[25赛季暑期集训 0816] B - Balanced Binary String ">
+                        <span class="hidden-mobile">[25赛季暑期集训 0816] B - Balanced Binary String </span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
