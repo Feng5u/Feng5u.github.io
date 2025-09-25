@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="赛时过题情况 懒癌发作，所以没有参加。 赛时过题数：0 赛后补题情况 2025.09.08 A 到 F 全部一遍过，G 还没有补，信心大涨。">
+    <meta name="description" content="Statement 给定一个数字 kkk，初始时甲乙两人手中各有 2k2^k2k 个蛋糕，每次可以选择以下两种操作之一：  操作 111：甲拿出一半的蛋糕给乙； 操作 222：乙拿出一半的蛋糕给甲。  最终要求，甲拥有 xxx 个蛋糕，乙拥有 2k+1−x2^{k+1}-x2k+1−x 个蛋糕。 1≤k≤60,1≤x≤2k+1−11 \leq k \leq 60, 1 \leq x \leq 2^">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[CF R1047] index">
-<meta property="og:url" content="https://feng5u.github.io/2025/09/08/CF-R1047-index/index.html">
+<meta property="og:title" content="[CF R1048] C. Cake Assignment">
+<meta property="og:url" content="https://feng5u.github.io/2025/09/10/CF-R1048-C-Cake-Assignment/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="赛时过题情况 懒癌发作，所以没有参加。 赛时过题数：0 赛后补题情况 2025.09.08 A 到 F 全部一遍过，G 还没有补，信心大涨。">
+<meta property="og:description" content="Statement 给定一个数字 kkk，初始时甲乙两人手中各有 2k2^k2k 个蛋糕，每次可以选择以下两种操作之一：  操作 111：甲拿出一半的蛋糕给乙； 操作 222：乙拿出一半的蛋糕给甲。  最终要求，甲拥有 xxx 个蛋糕，乙拥有 2k+1−x2^{k+1}-x2k+1−x 个蛋糕。 1≤k≤60,1≤x≤2k+1−11 \leq k \leq 60, 1 \leq x \leq 2^">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-08T14:33:54.000Z">
-<meta property="article:modified_time" content="2025-09-08T14:36:34.695Z">
+<meta property="article:published_time" content="2025-09-10T07:05:58.000Z">
+<meta property="article:modified_time" content="2025-09-10T07:38:15.989Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Conclusion">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>[CF R1047] index - Feng5u&#39;s blog</title>
+  <title>[CF R1048] C. Cake Assignment - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="[CF R1047] index"></span>
+            <span id="subtitle" data-typed-text="[CF R1048] C. Cake Assignment"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-08 22:33" pubdate>
-          2025年9月8日 晚上
+        <time datetime="2025-09-10 15:05" pubdate>
+          2025年9月10日 下午
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          45 字
+          305 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -261,17 +261,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">[CF R1047] index</h1>
+            <h1 id="seo-header">[CF R1048] C. Cake Assignment</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>赛时过题情况</h1>
-<p>懒癌发作，所以没有参加。</p>
-<p>赛时过题数：0</p>
-<h1>赛后补题情况</h1>
-<h2 id="2025-09-08">2025.09.08</h2>
-<p>A 到 F 全部一遍过，G 还没有补，信心大涨。</p>
+                <h1>Statement</h1>
+<p>给定一个数字 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>，初始时甲乙两人手中各有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span> 个蛋糕，每次可以选择以下两种操作之一：</p>
+<ol>
+<li>操作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>：甲拿出一半的蛋糕给乙；</li>
+<li>操作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span>：乙拿出一半的蛋糕给甲。</li>
+</ol>
+<p>最终要求，甲拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 个蛋糕，乙拥有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">2^{k+1}-x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9324em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> 个蛋糕。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mn>60</mn><mo separator="true">,</mo><mn>1</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><msup><mn>2</mn><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \leq k \leq 60, 1 \leq x \leq 2^{k+1} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">60</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9324em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></p>
+<h1>Tutorial_Me</h1>
+<p>将其视作对两个字符串的操作。两种操作可以被认为是：删去其中一个字符串的最低位的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，然后将这个字符串加到另一个字符串上。假设现在是初始状态，如果要给甲一系列连续的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，只需要乙不停去掉最低位 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 并给甲加入一些 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。如果要给甲一系列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，则首先令甲给乙一系列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，再将乙加到甲上，通过进位就得到了一系列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。但是这种方法很麻烦。</p>
+<h1>Tutorial</h1>
+<p>考虑到，如果此时甲 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span></span></span></span> 乙，那么一定有甲 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">&gt; 2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span>，于是上一个操作一定是乙把蛋糕给了甲。由此，反推过程即可。</p>
 
                 
               </div>
@@ -300,7 +306,7 @@
   
     <span>></span>
     
-  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Round-1047/" class="category-chain-item">Round 1047</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/Codeforces/Round-1048/" class="category-chain-item">Round 1048</a>
   
   
 
@@ -319,7 +325,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+        <a href="/tags/Conclusion/" class="print-no-link">#Conclusion</a>
       
     </div>
   
@@ -331,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>[CF R1047] index</div>
-      <div>https://feng5u.github.io/2025/09/08/CF-R1047-index/</div>
+      <div>[CF R1048] C. Cake Assignment</div>
+      <div>https://feng5u.github.io/2025/09/10/CF-R1048-C-Cake-Assignment/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月8日</div>
+          <div>2025年9月10日</div>
         </div>
       
       
@@ -376,9 +382,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/09/08/CF-R1047-E-Mexification/" title="[CF R1047] E. Mexification">
+                      <a href="/2025/09/10/CF-R1048-D-Antiamuny-Wants-to-Learn-Swap/" title="[CF R1048] D. Antiamuny Wants to Learn Swap">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[CF R1047] E. Mexification</span>
+                        <span class="hidden-mobile">[CF R1048] D. Antiamuny Wants to Learn Swap</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -386,8 +392,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/09/08/2025-09-08-%E8%87%B3-2025-09-14/" title="2025.09.08 至 2025.09.14">
-                        <span class="hidden-mobile">2025.09.08 至 2025.09.14</span>
+                      <a href="/2025/09/09/CF-R1047-G-Cry-Me-a-River/" title="[CF R1047] G. Cry Me a River">
+                        <span class="hidden-mobile">[CF R1047] G. Cry Me a River</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
