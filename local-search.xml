@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>2025.09.29 至 2025.10.05</title>
+    <link href="/2025/09/28/2025-09-29-%E8%87%B3-2025-10-05/"/>
+    <url>/2025/09/28/2025-09-29-%E8%87%B3-2025-10-05/</url>
+    
+    <content type="html"><![CDATA[<p>真是好久都没写学习记录了。</p><p>本周周三至周日都是国庆假期，要和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>sxr</mtext></mrow><annotation encoding="application/x-tex">\text{sxr}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">sxr</span></span></span></span></span> 出去玩，所以可能干不了太多事情，周计划暂定如下：</p><ol><li>继续补完笔记</li><li>完成作业：集合与图论、计算机系统基础</li><li>和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>zzf</mtext></mrow><annotation encoding="application/x-tex">\text{zzf}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">zzf</span></span></span></span></span> 搭建项目仓库</li><li>（可选）人工智能学习</li></ol><h2 id="2025-09-29">2025.09.29</h2><h3 id="计划">计划</h3><ol><li>复习数据结构上周作业，准备考试；</li><li>完成集图和计算机系统基础作业；</li><li>（可选）集图笔记</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习记录</category>
+      
+      <category>25 至 26 学年第一学期</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>记录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>[CF R1049] D. A Cruel Segment&#39;s Thesis</title>
     <link href="/2025/09/11/CF-R1049-D-A-Cruel-Segment-s-Thesis/"/>
     <url>/2025/09/11/CF-R1049-D-A-Cruel-Segment-s-Thesis/</url>
@@ -115,9 +142,9 @@
     
     <tags>
       
-      <tag>Game</tag>
-      
       <tag>Graph</tag>
+      
+      <tag>Game</tag>
       
       <tag>BFS</tag>
       
@@ -644,31 +671,6 @@
     <tags>
       
       <tag>记录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>[抽象代数] index</title>
-    <link href="/2025/08/13/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0-index/"/>
-    <url>/2025/08/13/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0-index/</url>
-    
-    <content type="html"><![CDATA[<p>这里的笔记对应书籍：罗特曼。抽象代数基础教程 [M]. 李样明，冯明军，译。北京：机械工业出版社，2006.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>抽象代数</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Note</tag>
       
     </tags>
     
@@ -3981,9 +3983,9 @@
     
     <tags>
       
-      <tag>Constructive Algorithms</tag>
-      
       <tag>Tree</tag>
+      
+      <tag>Constructive Algorithms</tag>
       
     </tags>
     
