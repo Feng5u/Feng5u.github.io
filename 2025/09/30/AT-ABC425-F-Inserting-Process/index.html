@@ -19,22 +19,22 @@
   <meta name="author" content="Feng5u">
   <meta name="keywords" content="">
   
-    <meta name="description" content="真是好久都没写学习记录了。 本周周三至周日都是国庆假期，要和 sxr\text{sxr}sxr 出去玩，所以可能干不了太多事情，周计划暂定如下：  继续补完笔记 完成作业：集合与图论、计算机系统基础 和 zzf\text{zzf}zzf 搭建项目仓库 （可选）人工智能学习  2025.09.29 计划  复习数据结构上周作业，准备考试； 完成集图和计算机系统基础作业； （可选）集图笔记  完成情况">
+    <meta name="description" content="Statement 给定一个字符串 TTT，构造如下字符串集 S&#x3D;{S0,S1,…,Sn}S &#x3D; \{S_0,S_1,\dots,S_n\}S&#x3D;{S0​,S1​,…,Sn​}，其中，S0S_0S0​ 是空字符串，SnS_nSn​ 是 TTT，SiS_iSi​ 是在 Si−1S_{i-1}Si−1​ 的基础上在任意位置加入了任意字符，并最终形成字符串 TTT。求出这样的字符串集的数量。 1≤n≤22">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2025.09.29 至 2025.10.05">
-<meta property="og:url" content="https://feng5u.github.io/2025/09/28/2025-09-29-%E8%87%B3-2025-10-05/index.html">
+<meta property="og:title" content="[AT ABC425] F - Inserting Process">
+<meta property="og:url" content="https://feng5u.github.io/2025/09/30/AT-ABC425-F-Inserting-Process/index.html">
 <meta property="og:site_name" content="Feng5u&#39;s blog">
-<meta property="og:description" content="真是好久都没写学习记录了。 本周周三至周日都是国庆假期，要和 sxr\text{sxr}sxr 出去玩，所以可能干不了太多事情，周计划暂定如下：  继续补完笔记 完成作业：集合与图论、计算机系统基础 和 zzf\text{zzf}zzf 搭建项目仓库 （可选）人工智能学习  2025.09.29 计划  复习数据结构上周作业，准备考试； 完成集图和计算机系统基础作业； （可选）集图笔记  完成情况">
+<meta property="og:description" content="Statement 给定一个字符串 TTT，构造如下字符串集 S&#x3D;{S0,S1,…,Sn}S &#x3D; \{S_0,S_1,\dots,S_n\}S&#x3D;{S0​,S1​,…,Sn​}，其中，S0S_0S0​ 是空字符串，SnS_nSn​ 是 TTT，SiS_iSi​ 是在 Si−1S_{i-1}Si−1​ 的基础上在任意位置加入了任意字符，并最终形成字符串 TTT。求出这样的字符串集的数量。 1≤n≤22">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-28T14:04:52.000Z">
-<meta property="article:modified_time" content="2025-09-29T14:57:30.762Z">
+<meta property="article:published_time" content="2025-09-30T09:06:44.000Z">
+<meta property="article:modified_time" content="2025-09-30T10:29:43.836Z">
 <meta property="article:author" content="Feng5u">
-<meta property="article:tag" content="记录">
+<meta property="article:tag" content="DP">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>2025.09.29 至 2025.10.05 - Feng5u&#39;s blog</title>
+  <title>[AT ABC425] F - Inserting Process - Feng5u&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,7 +190,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="2025.09.29 至 2025.10.05"></span>
+            <span id="subtitle" data-typed-text="[AT ABC425] F - Inserting Process"></span>
           
         </div>
 
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-09-28 22:04" pubdate>
-          2025年9月28日 晚上
+        <time datetime="2025-09-30 17:06" pubdate>
+          2025年9月30日 下午
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          213 字
+          305 字
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -261,34 +261,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">2025.09.29 至 2025.10.05</h1>
+            <h1 id="seo-header">[AT ABC425] F - Inserting Process</h1>
             
             
               <div class="markdown-body">
                 
-                <p>真是好久都没写学习记录了。</p>
-<p>本周周三至周日都是国庆假期，要和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>sxr</mtext></mrow><annotation encoding="application/x-tex">\text{sxr}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">sxr</span></span></span></span></span> 出去玩，所以可能干不了太多事情，周计划暂定如下：</p>
-<ol>
-<li>继续补完笔记</li>
-<li>完成作业：集合与图论、计算机系统基础</li>
-<li>和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>zzf</mtext></mrow><annotation encoding="application/x-tex">\text{zzf}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">zzf</span></span></span></span></span> 搭建项目仓库</li>
-<li>（可选）人工智能学习</li>
-</ol>
-<h2 id="2025-09-29">2025.09.29</h2>
-<h3 id="计划">计划</h3>
-<ol>
-<li>复习数据结构上周作业，准备考试；</li>
-<li>完成集图和计算机系统基础作业；</li>
-<li>（可选）集图笔记</li>
-</ol>
-<h3 id="完成情况">完成情况</h3>
-<p>考试准备了，但是考的不咋滴。集图的作业完成了，计算机系统的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Lab</mtext></mrow><annotation encoding="application/x-tex">\text{Lab}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">Lab</span></span></span></span></span> 写完了，剩下一堆没有截至时间的作业以后再说。集图笔记没补。</p>
-<h2 id="2025-09-30">2025.09.30</h2>
-<ol>
-<li>数据结构考试补题；</li>
-<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>ABC 425</mtext></mrow><annotation encoding="application/x-tex">\text{ABC 425}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">ABC 425</span></span></span></span></span>；</li>
-<li>（可选）集图笔记</li>
-</ol>
+                <h1>Statement</h1>
+<p>给定一个字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>，构造如下字符串集 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false">{</mo><msub><mi>S</mi><mn>0</mn></msub><mo separator="true">,</mo><msub><mi>S</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>S</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">S = \{S_0,S_1,\dots,S_n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>，其中，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">S_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是空字符串，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">S_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">S_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 是在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">S_{i-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span> 的基础上在任意位置加入了任意字符，并最终形成字符串 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>。求出这样的字符串集的数量。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">1 \leq n \leq 22</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">22</span></span></span></span></p>
+<h1>Tutorial</h1>
+<p>考虑从 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> 开始删除字符，采用状态压缩的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>DP</mtext></mrow><annotation encoding="application/x-tex">\text{DP}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord">DP</span></span></span></span></span>。同时可以发现，当有一段连续的相同字符时，删除其中任意一个形成的结果都是相同的，可能重复计数，因此规定：当出现一段连续的相同字符时，只能删除最左边的一个。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> i64 = <span class="hljs-type">long</span> <span class="hljs-type">long</span>;<br><span class="hljs-type">const</span> i64 MOD = <span class="hljs-number">998244353</span>;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    std::ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);<br>    std::cin.<span class="hljs-built_in">tie</span>(<span class="hljs-literal">nullptr</span>);<br><br>    <span class="hljs-type">int</span> n;<br>    std::string s;<br><br>    std::cin &gt;&gt; n;<br>    std::cin &gt;&gt; s;<br><br>    <span class="hljs-function">std::vector&lt;i64&gt; <span class="hljs-title">dp</span><span class="hljs-params">(<span class="hljs-number">1</span> &lt;&lt; n, <span class="hljs-number">0</span>)</span></span>;<br>    dp[(<span class="hljs-number">1</span> &lt;&lt; n) - <span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> now = (<span class="hljs-number">1</span> &lt;&lt; n) - <span class="hljs-number">1</span>; now &gt;= <span class="hljs-number">0</span>; now--) &#123;<br>        <span class="hljs-type">char</span> last = <span class="hljs-string">&#x27;#&#x27;</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) &#123;<br>            <span class="hljs-keyword">if</span> ((now &gt;&gt; j) &amp; <span class="hljs-number">1</span>) &#123;<br>                <span class="hljs-keyword">if</span> (last != s[j]) &#123;<br>                    dp[now ^ (<span class="hljs-number">1</span> &lt;&lt; j)] = (dp[now] + dp[now ^ (<span class="hljs-number">1</span> &lt;&lt; j)]) % MOD;<br>                &#125;<br>                last = s[j];<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    std::cout &lt;&lt; dp[<span class="hljs-number">0</span>] &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -307,13 +290,20 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="category-chain-item">学习记录</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/" class="category-chain-item">比赛题解</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/25-%E8%87%B3-26-%E5%AD%A6%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F/" class="category-chain-item">25 至 26 学年第一学期</a>
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/AtCoder/" class="category-chain-item">AtCoder</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%AF%94%E8%B5%9B%E9%A2%98%E8%A7%A3/AtCoder/AtCoder-Beginner-Contest-425/" class="category-chain-item">AtCoder Beginner Contest 425</a>
+  
+  
+
   
 
   
@@ -329,7 +319,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%B0%E5%BD%95/" class="print-no-link">#记录</a>
+        <a href="/tags/DP/" class="print-no-link">#DP</a>
       
     </div>
   
@@ -341,8 +331,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>2025.09.29 至 2025.10.05</div>
-      <div>https://feng5u.github.io/2025/09/28/2025-09-29-至-2025-10-05/</div>
+      <div>[AT ABC425] F - Inserting Process</div>
+      <div>https://feng5u.github.io/2025/09/30/AT-ABC425-F-Inserting-Process/</div>
     </div>
     <div class="license-meta">
       
@@ -354,7 +344,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年9月28日</div>
+          <div>2025年9月30日</div>
         </div>
       
       
@@ -386,9 +376,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/09/30/AT-ABC425-F-Inserting-Process/" title="[AT ABC425] F - Inserting Process">
+                      <a href="/2025/09/30/AT-ABC425-G-Sum-of-Min-of-XOR/" title="[AT ABC425] G - Sum of Min of XOR">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">[AT ABC425] F - Inserting Process</span>
+                        <span class="hidden-mobile">[AT ABC425] G - Sum of Min of XOR</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +386,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/09/11/CF-R1049-D-A-Cruel-Segment-s-Thesis/" title="[CF R1049] D. A Cruel Segment&#39;s Thesis">
-                        <span class="hidden-mobile">[CF R1049] D. A Cruel Segment&#39;s Thesis</span>
+                      <a href="/2025/09/28/2025-09-29-%E8%87%B3-2025-10-05/" title="2025.09.29 至 2025.10.05">
+                        <span class="hidden-mobile">2025.09.29 至 2025.10.05</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
